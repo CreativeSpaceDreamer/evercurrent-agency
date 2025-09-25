@@ -1,0 +1,41 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: theme('colors.slate');
+  color: theme('colors.ink');
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-ink text-paper px-6 py-3 font-semibold transition hover:bg-ink-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border border-ink bg-transparent px-6 py-3 font-semibold text-ink transition hover:border-ink-2 hover:text-ink-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+}
+
+.section-title {
+  @apply text-3xl font-semibold tracking-tight text-ink sm:text-4xl;
+}
+
+.section-eyebrow {
+  @apply text-xs uppercase tracking-[0.35em] text-accent font-semibold;
+}
+
+.section-subtitle {
+  @apply text-lg text-ink-2 max-w-2xl;
+}
+
+.card {
+  @apply rounded-3xl border border-slate bg-paper p-8 shadow-soft;
+}
+
+.card-muted {
+  @apply rounded-3xl border border-transparent bg-slate p-8;
+}

@@ -1,4 +1,6 @@
 ﻿import Link from "next/link";
+import { AddOnsSection, PackagesSection } from "@/app/components/evercurrent/AddOnsPackages";
+
 
 const serviceTiers = [
   {
@@ -58,24 +60,24 @@ const process = [
 const pricing = [
   {
     tier: "Foundations",
-    listSize: "= 50k subscribers",
-    audit: "$4.5k–$7.5k",
-    build: "$8k–$16k",
-    retainer: "$4k–$7k/mo"
+    listSize: "<= 50k subscribers",
+    audit: "$4.5k-$7.5k",
+    build: "$8k-$16k",
+    retainer: "$4k-$7k/mo"
   },
   {
     tier: "Growth",
-    listSize: "50k–250k subscribers",
-    audit: "$7.5k–$12k",
-    build: "$16k–$32k",
-    retainer: "$7k–$12k/mo"
+    listSize: "50k-250k subscribers",
+    audit: "$7.5k-$12k",
+    build: "$16k-$32k",
+    retainer: "$7k-$12k/mo"
   },
   {
     tier: "Scale",
-    listSize: "250k–1M subscribers",
+    listSize: "250k-1M subscribers",
     audit: "$12k+",
     build: "$32k+",
-    retainer: "$12k–$18k/mo"
+    retainer: "$12k-$18k/mo"
   }
 ];
 
@@ -173,6 +175,10 @@ export default function ServicesPage() {
           ))}
         </div>
       </section>
+
+      <AddOnsSection />
+
+      <PackagesSection />
 
       <section className="bg-ink text-paper">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20 md:flex-row md:items-center md:justify-between">

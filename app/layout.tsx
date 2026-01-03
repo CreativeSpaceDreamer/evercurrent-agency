@@ -1,5 +1,6 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -41,6 +42,7 @@ export default function RootLayout({
         <main className="min-h-[calc(100vh-18rem)]">{children}</main>
         <SiteFooter />
         <AnalyticsScripts />
+        <Analytics />
       </body>
     </html>
   );

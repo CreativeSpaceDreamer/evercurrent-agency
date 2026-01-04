@@ -12,7 +12,7 @@ const deliverables = [
 const proof = [
   {
     label: "Flow revenue share",
-    value: "32?58%",
+    value: "32-58%",
     detail: "Rebuilt flows + segmentation for launch-heavy fashion brand."
   },
   {

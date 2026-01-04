@@ -46,8 +46,8 @@ const CASE_STUDIES: Record<string, Study> = {
     title: "Drop orchestration doubled launch-week revenue",
     hero: "We synchronized email, SMS, and paid to elevate VIP waitlists and inventory-aware messaging.",
     stats: [
-      { label: "Flow revenue share", value: "32?58%", detail: "Drop waitlists, browse triggers, and VIP previews." },
-      { label: "Launch-week revenue", value: "2.1�", detail: "Sequenced VIP, general list, and paid retargeting." },
+      { label: "Flow revenue share", value: "32-58%", detail: "Drop waitlists, browse triggers, and VIP previews." },
+      { label: "Launch-week revenue", value: "2.1x", detail: "Sequenced VIP, general list, and paid retargeting." },
       { label: "Unsub rate", value: "0.18%", detail: "Fatigue controls and post-drop segmentation." }
     ],
     challenge: [
@@ -63,7 +63,7 @@ const CASE_STUDIES: Record<string, Study> = {
     ],
     outcomes: [
       "Drop flows drove 26% of launch revenue in week one.",
-      "VIP segments converted 2.4� baseline thanks to early access.",
+      "VIP segments converted 2.4x baseline thanks to early access.",
       "Inventory-aware suppression protected late buyers and reduced complaints." 
     ]
   },
@@ -106,7 +106,9 @@ export default function CaseStudyDetail({ params }: { params: { slug: string } }
     <div className="bg-slate">
       <section className="bg-paper">
         <div className="mx-auto w-full max-w-6xl px-6 py-20">
-          <p className="section-eyebrow">Case study � {study.category}</p>
+          <p className="section-eyebrow">
+            Case study {"\u00B7"} {study.category}
+          </p>
           <h1 className="mt-4 text-5xl font-semibold text-ink md:text-6xl">{study.title}</h1>
           <p className="mt-6 max-w-3xl text-lg text-ink-2">{study.hero}</p>
           <Link href="/contact" className="btn-primary mt-8 text-base">

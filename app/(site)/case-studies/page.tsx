@@ -20,7 +20,7 @@ const CASE_STUDIES: CaseStudy[] = [
     slug: "fashion-drops",
     category: "Fashion Drops",
     title: "Drop orchestration doubled launch-week revenue",
-    result: "Flow revenue 32?58%",
+    result: "Flow revenue 32-58%",
     summary: "Waitlists, VIP previews, and inventory-aware automations scaled launch performance without list fatigue."
   },
   {

@@ -34,7 +34,7 @@ const services = [
 ];
 
 const proofPoints = [
-  { label: "Flow revenue share", value: "28-52%", detail: "Refill SKU brand doubled revenue from automation in 60 days." },
+  { label: "Flow revenue share", value: "38-64%", detail: "Refill SKU brand doubled revenue from automation in 60 days." },
   { label: "Cohort LTV lift", value: "+27%", detail: "Apparel client gained 27% LTV in 90 days while keeping unsubscribes at 0.18%." },
   { label: "Send volume growth", value: "2x", detail: "Scaled campaigns without hurting deliverability for a CPG subscription." }
 ];
@@ -300,7 +300,7 @@ export default function HomePage() {
           <p className="section-eyebrow">Why Evercurrent</p>
           <h2 className="section-title mt-3">Built for operators, not vanity metrics.</h2>
           <p className="section-subtitle mt-4">
-            We measure success by repeat revenue and LTV. Here's how that looks when we're embedded with your team.
+            We measure success by repeat revenue and LTV. Here&#39;s how that looks when we&#39;re embedded with your team.
           </p>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-2">

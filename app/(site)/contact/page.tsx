@@ -46,7 +46,7 @@ export default function ContactPage() {
               ))}
             </div>
             <p className="mt-6 text-sm text-ink-2">
-              Prefer email? Reach us at <a href="mailto:hello@evercurrent.agency" className="underline hover:text-accent">hello@evercurrent.agency</a> or call +1 (408) 555-0196.
+              Prefer email? Reach us at <a href="mailto:hello@evercurrent.agency" className="underline hover:text-accent">hello@evercurrent.agency</a> or call +1 (401) 992-5475.
             </p>
           </div>
           <LeadCaptureForm

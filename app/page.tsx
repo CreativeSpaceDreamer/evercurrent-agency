@@ -389,6 +389,9 @@ export default function HomePage() {
             <p className="mt-4 text-base text-slate">
               Get the lifecycle scorecard, roadmap, and revenue model that powers every engagement. We uncover quick wins within 10 business days.
             </p>
+            <p className="mt-3 text-sm text-slate">
+              Prefer email or phone? Reach us at <a href="mailto:hello@evercurrent.agency" className="underline hover:text-accent">hello@evercurrent.agency</a> or call +1 (401) 992-5475.
+            </p>
           </div>
         <div className="flex flex-col gap-4 text-sm font-semibold">
           <Link href="/contact" className="btn-primary w-full bg-paper text-ink hover:bg-slate sm:w-auto">

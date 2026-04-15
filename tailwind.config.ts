@@ -8,46 +8,46 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Exact colors from Lead Generation Academy
-        primary: "hsl(40, 100%, 50%)", // #FFAA00 - Bright gold/orange
-        "primary-light": "hsl(40, 100%, 60%)", // #FFBF40 - Lighter gold
-        "primary-dark": "hsl(40, 100%, 40%)", // #CC8800 - Darker gold
-        gold: "hsl(40, 100%, 50%)", // #FFAA00 - Same as primary
-        "gold-light": "hsl(40, 100%, 60%)", // #FFBF40
-        "gold-dark": "hsl(40, 100%, 40%)", // #CC8800
-        background: "hsl(0, 0%, 100%)", // #FFFFFF - Pure white
-        foreground: "hsl(220, 15%, 15%)", // #2A2E33 - Dark gray text
-        "foreground-secondary": "hsl(220, 15%, 15%)", // #2A2E33
-        "foreground-muted": "hsl(220, 10%, 45%)", // #6B7280 - Muted gray
-        "foreground-on-gold": "hsl(220, 15%, 10%)", // #1F2328 - Dark text on gold
-        card: "hsl(0, 0%, 100%)", // #FFFFFF
-        "card-secondary": "hsl(220, 10%, 96%)", // #F5F5F7 - Light gray
-        border: "hsl(220, 15%, 90%)", // #E2E5E9 - Light border
-        input: "hsl(220, 15%, 90%)", // #E2E5E9
-        ring: "hsl(40, 100%, 50%)", // #FFAA00 - Gold focus ring
-        destructive: "hsl(0, 84.2%, 60.2%)", // #EF4444 - Error red
-        "destructive-foreground": "hsl(210, 40%, 98%)", // #FAFAFA
+        // Exact colors from Lead Generation Academy - Cyan/Turquoise + Dark theme
+        primary: "#00D9FF", // Bright cyan
+        "primary-light": "#33E5FF", // Lighter cyan
+        "primary-dark": "#00A8CC", // Darker cyan
+        cyan: "#00D9FF",
+        "cyan-light": "#33E5FF",
+        "cyan-dark": "#00A8CC",
+        background: "#0A0A0A", // Near-black background
+        foreground: "#FFFFFF", // White text
+        "foreground-secondary": "#E8E8E8", // Light gray text
+        "foreground-muted": "#999999", // Muted gray
+        "foreground-on-cyan": "#000000", // Dark text on cyan
+        card: "#1A1A1A", // Dark card background
+        "card-secondary": "#252525", // Slightly lighter card
+        border: "#333333", // Dark border
+        input: "#252525", // Dark input background
+        ring: "#00D9FF", // Cyan focus ring
+        destructive: "#FF3333", // Red
+        "destructive-foreground": "#FFFFFF",
         // Legacy color mappings for existing components
-        ink: "hsl(220, 15%, 15%)", // #2A2E33
-        "ink-2": "hsl(220, 10%, 45%)", // #6B7280
-        accent: "hsl(40, 100%, 50%)", // #FFAA00
-        "accent-2": "hsl(40, 100%, 60%)", // #FFBF40
-        slate: "hsl(220, 10%, 96%)", // #F5F5F7
-        paper: "hsl(0, 0%, 100%)", // #FFFFFF
-        onyx: "hsl(220, 15%, 15%)", // #2A2E33
-        stone: "hsl(220, 10%, 45%)", // #6B7280
-        bone: "hsl(220, 10%, 96%)", // #F5F5F7
-        fog: "hsl(220, 15%, 90%)", // #E2E5E9
-        stroke: "hsl(220, 15%, 90%)", // #E2E5E9
-        ivory: "hsl(220, 10%, 96%)", // #F5F5F7
-        cream: "hsl(220, 10%, 96%)", // #F5F5F7
-        taupe: "hsl(220, 10%, 45%)", // #6B7280
-        terracotta: "hsl(40, 100%, 50%)", // #FFAA00
-        "ivory-hover": "hsl(220, 15%, 90%)", // #E2E5E9
-        "ivory-soft": "hsl(220, 10%, 96%)", // #F5F5F7
-        cocoa: "hsl(220, 15%, 15%)", // #2A2E33
-        "cocoa-hover": "hsl(220, 15%, 10%)", // #1F2328
-        espresso: "hsl(220, 15%, 10%)", // #1F2328
+        ink: "#FFFFFF", // White
+        "ink-2": "#E8E8E8", // Light gray
+        accent: "#00D9FF", // Cyan
+        "accent-2": "#33E5FF", // Light cyan
+        slate: "#252525", // Dark slate
+        paper: "#FFFFFF", // White (for light elements)
+        onyx: "#0A0A0A", // Near-black
+        stone: "#999999", // Gray
+        bone: "#E8E8E8", // Light color
+        fog: "#333333", // Dark gray
+        stroke: "#333333", // Borders
+        ivory: "#E8E8E8", // Light color
+        cream: "#F5F5F5", // Off-white
+        taupe: "#999999", // Gray
+        terracotta: "#00D9FF", // Cyan (not terracotta)
+        "ivory-hover": "#444444", // Hover state
+        "ivory-soft": "#252525", // Soft background
+        cocoa: "#1A1A1A", // Dark
+        "cocoa-hover": "#252525", // Hover
+        espresso: "#0A0A0A", // Very dark
         highlight: "hsl(40, 100%, 50%)" // #FFAA00
       },
       fontFamily: {

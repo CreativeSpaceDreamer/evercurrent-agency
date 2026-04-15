@@ -1,352 +1,327 @@
-﻿import Link from "next/link";
+import Image from "next/image";
+import Link from "next/link";
 
-const services = [
+function IvoryMaskIcon({ src, alt }: { src: string; alt: string }) {
+  return (
+    <span
+      role="img"
+      aria-label={alt}
+      className="block h-10 w-10 bg-ink sm:h-11 sm:w-11"
+      style={{
+        WebkitMaskImage: `url(${src})`,
+        maskImage: `url(${src})`,
+        WebkitMaskRepeat: "no-repeat",
+        maskRepeat: "no-repeat",
+        WebkitMaskPosition: "center",
+        maskPosition: "center",
+        WebkitMaskSize: "contain",
+        maskSize: "contain"
+      }}
+    />
+  );
+}
+
+function ProcessLineIcon({ step }: { step: "Diagnose" | "Build" | "Scale" }) {
+  if (step === "Diagnose") {
+    return (
+      <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" aria-hidden="true">
+        <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="1.6" />
+        <path d="M20 20L16.8 16.8" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      </svg>
+    );
+  }
+
+  if (step === "Build") {
+    return (
+      <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" aria-hidden="true">
+        <rect x="3.5" y="4.5" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.6" />
+        <rect x="13.5" y="4.5" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.6" />
+        <rect x="8.5" y="13.5" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.6" />
+        <path d="M10.5 8H13.5M12 11.5V13.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" aria-hidden="true">
+      <path d="M4 17L10 11L14 15L20 9" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M15.5 9H20V13.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+const strugglePoints = [
   {
-    title: "Email + Lifecycle Systems",
-    summary: "Automated email flows and campaigns that grow repeat revenue 10-30% within 60-90 days.",
-    href: "/services/email",
-    metrics: [
-      "High-impact revenue flows installed + QA (welcome, abandon, post-purchase, winback).",
-      "90-day campaign calendar (offers, creative, and testing plan).",
-      "Deliverability + list hygiene rituals (warmups, suppression, compliance)."
-    ]
+    title: "Rising Acquisition Costs",
+    body: "Paid traffic is powerful, but acquisition costs keep rising. Many brands believe spending more on growth will lead to sustained results. In reality, maintaining momentum often requires even more spend. Without a true retention system, margins get squeezed and long-term growth is capped.",
+    icon: "/images/constraints/diagnose.png"
   },
   {
-    title: "Retention Operations Support",
-    summary: "We run the weekly segmentation, testing, and reporting cadence so you stay focused on new creative and offers.",
-    href: "/services",
-    metrics: [
-      "Optimization sprints (hypothesis -> test -> recap).",
-      "Revenue + LTV dashboards (flow share, cohorts, list health).",
-      "Actionable weekly recaps (next steps, owners, deadlines)."
-    ]
+    title: "Low Conversion",
+    body: "It's easy to drive traffic, but turning visitors into buyers is another challenge. Many brands accept low conversion rates, assuming they will improve over time. In reality, more traffic does not solve a weak customer journey. Without stronger conversion, revenue is lost at the point of intent.",
+    icon: "/images/constraints/conversion-path.png"
   },
   {
-    title: "SMS & Push Upgrades",
-    summary: "Layer conversational SMS, push, and onsite triggers once email is compounding to extend every lifecycle moment.",
-    href: "/services/sms",
-    metrics: [
-      "Two-way SMS concierge (human replies for VIPs).",
-      "Behavior-led push + onsite (triggered nudges, reminders, promos).",
-      "Consent + compliance playbooks (TCPA, carrier, platform rules)."
-    ]
+    title: "Low Customer Lifetime Value",
+    body: "Many brands are fixated on acquiring new customers, believing volume alone drives growth. But if those customers do not come back or spend more over time, growth begins to stall. Without retention, revenue stays shallow and scaling becomes far more difficult.",
+    icon: "/images/constraints/lifetime-growth.png"
   }
 ];
 
-const proofPoints = [
-  { label: "Flow revenue share", value: "38-64%", detail: "Refill SKU brand doubled revenue from automation in 60 days." },
-  { label: "Cohort LTV lift", value: "+27%", detail: "Apparel client gained 27% LTV in 90 days while keeping unsubscribes at 0.18%." },
-  { label: "Send volume growth", value: "2x", detail: "Scaled campaigns without hurting deliverability for a CPG subscription." }
-];
-
-const mobileProofPreview = proofPoints.slice(0, 2);
-
-const caseSnapshot = {
-  brand: "Lumen & Loom - sustainable apparel",
-  headline: "Case snapshot",
-  result: "+27% cohort LTV in 90 days",
-  summary: "Plateaued LTV? We rebuilt the revenue flows, launched a campaign engine, and held unsubscribes under 0.2% while doubling contribution.",
-  link: "/case-studies/lumen-and-loom"
-};
-
-const lifecycleProcess = [
+const processSteps = [
   {
-    title: "Audit & Scorecard",
-    detail: "List health, tracking, attribution, and missed revenue opportunities mapped within 10 business days."
+    title: "Diagnose",
+    body: "We start by identifying where revenue is being lost across your customer journey - from list growth and conversion to retention, lifecycle gaps, and missed repeat purchase opportunities."
   },
   {
-    title: "Foundations",
-    detail: "Domain + deliverability, capture, creative system, and KPI targets locked before scaling volume."
+    title: "Build",
+    body: "Next, we create the retention infrastructure your brand actually needs: flows, campaigns, segmentation, offers, and customer journey systems designed to support profitable growth."
   },
   {
-    title: "Lifecycle Engine",
-    detail: "Flows, campaigns, and revenue intelligence dashboards deployed and stress-tested."
+    title: "Scale",
+    body: "Once the foundation is in place, we optimize performance over time - improving conversion, increasing customer lifetime value, and helping retention become a stronger growth channel."
+  }
+] as const;
+
+const designProofItems = [
+  {
+    title: "Welcome / First Purchase",
+    caption: "Built to convert new subscribers into first-time customers while introducing the brand with clarity and taste.",
+    image: "/images/design-proof/welcome-email.png"
   },
   {
-    title: "Optimize & Scale",
-    detail: "Weekly ops rituals, experiments, and segmentation roadmaps that keep the list compounding."
+    title: "Founder Story",
+    caption: "Built to deepen connection and trust through brand story, emotion, and point of view.",
+    image: "/images/design-proof/founder-note.png"
+  },
+  {
+    title: "Hero Product Education",
+    caption: "Built to turn product interest into purchase through education, positioning, and premium presentation.",
+    image: "/images/design-proof/shop-barrier-serum.png"
+  },
+  {
+    title: "Routine / Educational",
+    caption: "Built to help customers understand how products work together and how to use them well.",
+    image: "/images/design-proof/educational-email-v2.png"
+  },
+  {
+    title: "Winback / Replenishment",
+    caption: "Built to reactivate previous buyers and bring customers back into the lifecycle.",
+    image: "/images/design-proof/winback-email-v2.png"
   }
 ];
 
-const idealClientSignals = [
-  "Shopify or DTC brand with consistent traffic (250+ orders/month) but plateauing repeat revenue.",
-  "Existing Klaviyo (or similar ESP) data with gaps in flows, segmentation, or deliverability hygiene.",
-  "High-margin SKUs, subscriptions, or bundles where a 10% bump in LTV moves overall growth.",
-  "Lean growth teams that need a retention partner who can own strategy, creative, and ops."
-];
-
-const whyEvercurrent = [
+const helpPillars = [
   {
-    title: "Systems first",
-    detail: "We build the revenue flows, monitoring, and reporting before sending more campaigns - no spray and pray."
+    title: "Lifecycle strategy",
+    body: "Retention audits, roadmaps, segmentation thinking, and offer logic based on how customers actually buy."
   },
   {
-    title: "Revenue accountability",
-    detail: "Every engagement ties back to LTV, flow share, and cash collected, not vanity opens or impressions."
+    title: "Flows and automation",
+    body: "Full lifecycle flows built with clear intent and performance accountability behind every message."
   },
   {
-    title: "Retention experts",
-    detail: "We stay in lifecycle. Acquisition, ads, or random projects get declined so your team knows our focus."
+    title: "Campaign systems",
+    body: "Planned campaign execution with copy, design, merchandising, and calendar structure."
   },
   {
-    title: "Operator mindset",
-    detail: "We work like an embedded retention lead: agendas, retros, and decision logs that keep stakeholders aligned."
+    title: "Premium creative execution",
+    body: "Design and messaging quality that reflects the brand standard while converting at a high level."
   }
 ];
 
-const resources = [
+const faqItems = [
   {
-    eyebrow: "Guide",
-    title: "Retention Systems Blueprint",
-    description: "How we install the Evercurrent operating system across email, SMS, and push.",
-    href: "/resources/guides"
+    question: "What kinds of brands do you work with?",
+    answer:
+      "We work with growing e-commerce brands that want a stronger retention system behind their growth. Our sweet spot is brands that care about customer experience, conversion quality, and long-term customer value."
   },
   {
-    eyebrow: "Email Design",
-    title: "Lifecycle Design Library",
-    description: "Reusable blocks, typography, and hierarchy patterns for lifecycle conversions.",
-    href: "/resources/email-designs"
+    question: "What do you actually help with?",
+    answer:
+      "We help brands improve repeat revenue through strategy-led email and SMS, lifecycle flows, campaigns, segmentation, offer logic, and retention infrastructure built to support a more premium customer journey."
+  },
+  {
+    question: "Do you only work on email?",
+    answer:
+      "No. Email is a major part of retention, but we look at the broader lifecycle system behind growth. That includes list growth, conversion opportunities, flow architecture, campaign strategy, segmentation, and repeat purchase behavior. This is about building a stronger retention engine, not just sending more messages."
+  },
+  {
+    question: "What is the first step to working together?",
+    answer:
+      "The first step is a strategy call. We use that conversation to understand your current lifecycle setup, where revenue may be leaking, what to fix first, and what a stronger retention system should look like for your stage."
+  },
+  {
+    question: "Do you offer one-time projects or ongoing support?",
+    answer:
+      "Yes. Depending on what your brand needs, the right fit may be a focused strategy engagement, a retention buildout, or ongoing support to improve performance over time through testing, iteration, and optimization."
+  },
+  {
+    question: "What makes Lifecycle Inbox different?",
+    answer:
+      "Lifecycle Inbox is built around one idea: growing e-commerce brands should not have to choose between strong performance and strong presentation. We focus on strategy-led retention systems, premium creative standards, full lifecycle thinking, intentional campaign planning, and founder-led oversight."
   }
-];
-
-const caseStudyHighlights = [
-  {
-    slug: "lumen-and-loom",
-    category: "Sustainable Fashion",
-    title: "Lifecycle rebuild lifted revenue 23% for Lumen & Loom.",
-    description: "Audit -> Sprint -> Retainer rewired lifecycle for the regenerative apparel brand.",
-    result: "+23% revenue lift"
-  },
-  {
-    slug: "habit-coaching",
-    category: "Wellness Subscription",
-    title: "Habit Coach Co regained retention rituals with coaching journeys.",
-    description: "Concierge SMS, habit stacking, and progressive profiling boosted subscription saves nineteen percent.",
-    result: "+19% subscription saves"
-  },
-  {
-    slug: "cpg-bundles",
-    category: "Food & Drink CPG",
-    title: "Gather Goods pulled repeat orders forward with dynamic bundles.",
-    description: "Recipe storytelling, reorder intelligence, and deliverability guardrails raised bundle AOV and cadence.",
-    result: "+22% bundle AOV"
-  }
-];
+] as const;
 
 export default function HomePage() {
   return (
-    <div className="bg-slate">
-      <section className="relative overflow-hidden bg-paper">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 py-20 lg:flex-row lg:items-center">
-          <div className="lg:flex-1">
-            <p className="section-eyebrow">Evercurrent.agency - Lifecycle retention for DTC</p>
-            <h1 className="mt-6 text-4xl font-semibold text-ink sm:text-5xl md:text-6xl">
-              Grow repeat revenue with automated email + SMS systems.
+    <div className="bg-paper">
+      <section
+        id="home"
+        className="scroll-mt-28 flex min-h-[calc(100svh-3.5rem)] flex-col bg-paper sm:min-h-0"
+      >
+        <div className="section-shell pt-2 pb-8 sm:pt-20 sm:pb-10 md:pt-24 md:pb-12 lg:pt-28 lg:pb-14">
+          <div className="mx-auto max-w-[52rem] text-center">
+            <h1 className="mx-auto max-w-[21.5rem] text-[1.62rem] font-semibold leading-[0.98] text-ink sm:max-w-none sm:text-6xl md:text-[4.5rem] lg:text-[5.2rem]">
+              We build the lifecycle engine behind growing e-commerce brands.
             </h1>
-            <p className="mt-6 text-lg text-ink-2 sm:max-w-xl">
-              We grow repeat purchase revenue and LTV with lifecycle email systems (flows + campaigns + measurement). Every engagement delivers flows, campaigns, and measurement in 60-90 days.
-            </p>
-            <p className="mt-4 text-sm font-semibold text-ink sm:max-w-lg">For DTC brands with traffic + sales but weak repeat purchase performance.</p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Link href="/contact" className="btn-primary w-full text-base sm:w-auto">
-                Book strategy session
-              </Link>
-            </div>
-            <dl className="mt-12 grid gap-6 sm:grid-cols-3">
-              {proofPoints.map((point) => (
-                <div key={point.label} className="card-muted">
-                  <dt className="text-xs font-semibold uppercase tracking-[0.35em] text-accent">{point.label}</dt>
-                  <dd className="mt-4 text-3xl font-semibold text-ink">{point.value}</dd>
-                  <p className="mt-2 text-sm text-ink-2">{point.detail}</p>
-                </div>
-              ))}
-            </dl>
-          </div>
-          <div className="lg:flex-1">
-            <div className="space-y-6">
-              <article className="card space-y-3">
-                <span className="text-xs font-semibold uppercase tracking-[0.35em] text-accent">{caseSnapshot.headline}</span>
-                <h2 className="text-2xl font-semibold text-ink">{caseSnapshot.result}</h2>
-                <p className="text-sm text-ink-2">{caseSnapshot.summary}</p>
-                <p className="text-sm font-semibold text-ink">{caseSnapshot.brand}</p>
-                <Link href={caseSnapshot.link} className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition hover:text-accent">
-                  View the playbook
-                  <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                  </svg>
-                </Link>
-              </article>
-              <article className="card space-y-6">
-                <h2 className="text-xl font-semibold text-ink">What we set up for you</h2>
-                <ul className="space-y-4 text-sm text-ink-2">
-                  <li><strong className="font-semibold text-ink">Automated email systems</strong> built for your top products, promos, and retention plays.</li>
-                  <li><strong className="font-semibold text-ink">Campaign engine</strong> that ships a 90-day plan with creative, offers, and tests.</li>
-                  <li><strong className="font-semibold text-ink">Revenue dashboards</strong> that show flow share, LTV lift, and list health at a glance.</li>
-                  <li><strong className="font-semibold text-ink">Retention workflows</strong> with agendas, recaps, and next actions run by our team.</li>
-                </ul>
-                <Link href="/contact" className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition hover:text-accent">
-                  Book a strategy session
-                  <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                  </svg>
-                </Link>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="px-6 pb-10 md:hidden">
-        <div className="space-y-4 rounded-3xl bg-ink p-6 text-paper">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-accent-2">Mobile summary</p>
-          <h2 className="text-2xl font-semibold text-paper">Need fast answers?</h2>
-          <p className="text-sm text-paper/80">
-            Book a quick strategy call and we&#39;ll review your flows, deliverability, and the fastest way to grow repeat purchases from your phone.
-          </p>
-          <ul className="space-y-3 text-sm text-paper">
-            {mobileProofPreview.map((point) => (
-              <li key={point.label} className="flex items-start gap-3">
-                <span className="mt-1 h-2 w-2 rounded-full bg-accent-2" aria-hidden="true" />
-                <div>
-                  <p className="text-base font-semibold text-paper">{point.value}</p>
-                  <p className="text-xs text-paper/70">{point.detail}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-          <Link href="/contact" className="btn-primary w-full">
-            Book strategy session
-          </Link>
-        </div>
-      </section>
-
-      <section className="mx-auto w-full max-w-6xl px-6 py-12">
-        <div className="grid gap-8 rounded-3xl bg-ink p-8 text-paper md:grid-cols-2">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-accent-2">Who we work with</p>
-            <h2 className="mt-4 text-3xl font-semibold">Brands that benefit the most.</h2>
-            <p className="mt-4 text-base text-slate">You don&#39;t need another agency deck - you need a retention partner who understands your revenue model and can operate independently.</p>
-          </div>
-          <ul className="space-y-4 text-sm text-paper/90">
-            {idealClientSignals.map((signal) => (
-              <li key={signal} className="flex items-start gap-3">
-                <span className="mt-1 h-2 w-2 rounded-full bg-accent-2" aria-hidden="true" />
-                {signal}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section className="mx-auto w-full max-w-6xl px-6 py-20">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p className="section-eyebrow">Services</p>
-            <h2 className="section-title mt-2">Email first. Lifecycle always.</h2>
-            <p className="section-subtitle mt-4">
-              We build the revenue-critical flows and campaigns first, then layer SMS, push, and onsite extensions once the foundation is compounding.
+            <p className="mx-auto mt-3 max-w-[22rem] text-[0.95rem] leading-6 text-ink-2 sm:mt-7 sm:max-w-[40rem] sm:text-lg sm:leading-normal md:text-xl">
+              We help you grow repeat revenue through strategy-led email, SMS, flows, campaigns, and retention
+              infrastructure built to match a premium customer experience.
             </p>
           </div>
-          <Link href="/contact" className="btn-secondary w-full sm:w-auto">
-            Book strategy session
-          </Link>
         </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {services.map((service) => (
-            <article key={service.title} className="card flex h-full flex-col justify-between gap-6">
-              <div>
-                <h3 className="text-2xl font-semibold text-ink">{service.title}</h3>
-                <p className="mt-3 text-sm text-ink-2">{service.summary}</p>
+
+        <div className="section-shell mt-auto -mt-6 pt-1 pb-10 sm:mt-0 sm:pt-8 sm:pb-16 md:pt-10 md:pb-20">
+          <div className="premium-panel mx-auto -mt-[43px] mb-[43px] max-w-5xl p-1.5 sm:mt-0 sm:mb-0 sm:p-3">
+            <div className="relative aspect-[16/8] overflow-hidden rounded-[1.1rem] border border-stroke bg-slate sm:aspect-video sm:rounded-[1.35rem]">
+              <div className="absolute -left-12 -top-10 h-44 w-44 rounded-full bg-ink/5 blur-2xl" aria-hidden="true" />
+              <div className="absolute -bottom-14 -right-10 h-48 w-48 rounded-full bg-ink/5 blur-2xl" aria-hidden="true" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <button
+                  type="button"
+                  aria-label="Play VSL placeholder"
+                  className="flex h-16 w-16 items-center justify-center rounded-full bg-paper/90 text-ink shadow-soft sm:h-20 sm:w-20"
+                >
+                  <svg className="h-7 w-7 translate-x-[1px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M8 6v12l10-6-10-6z" />
+                  </svg>
+                </button>
               </div>
-              <ul className="space-y-2 text-sm text-ink">
-                {service.metrics.map((metric) => (
-                  <li key={metric} className="flex items-center gap-2">
-                    <span className="h-2 w-2 rounded-full bg-accent" aria-hidden="true" />
-                    {metric}
-                  </li>
-                ))}
-              </ul>
-              <Link className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition hover:text-accent" href={service.href}>
-                Learn more
-                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M13 6l6 6-6 6" />
-                </svg>
-              </Link>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="bg-paper">
-        <div className="mx-auto w-full max-w-6xl px-6 py-20">
-          <div className="max-w-3xl">
-            <p className="section-eyebrow">How we work</p>
-            <h2 className="section-title mt-3">An operating cadence you can rely on.</h2>
-            <p className="section-subtitle mt-4">Every engagement follows the same sequence so your team knows exactly what&#39;s shipping and when.</p>
+            </div>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {lifecycleProcess.map((step) => (
-              <article key={step.title} className="card space-y-3">
-                <h3 className="text-xl font-semibold text-ink">{step.title}</h3>
-                <p className="text-sm text-ink-2">{step.detail}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto w-full max-w-6xl px-6 py-20">
-        <div className="max-w-3xl">
-          <p className="section-eyebrow">Why Evercurrent</p>
-          <h2 className="section-title mt-3">Built for operators, not vanity metrics.</h2>
-          <p className="section-subtitle mt-4">
-            We measure success by repeat revenue and LTV. Here&#39;s how that looks when we&#39;re embedded with your team.
-          </p>
-        </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
-          {whyEvercurrent.map((reason) => (
-            <article key={reason.title} className="card space-y-3">
-              <h3 className="text-xl font-semibold text-ink">{reason.title}</h3>
-              <p className="text-sm text-ink-2">{reason.detail}</p>
-            </article>
-          ))}
-        </div>
-        <div className="mt-10">
-          <Link href="/contact" className="btn-primary w-full sm:w-auto">
-            Book strategy session
-          </Link>
-        </div>
-      </section>
-
-      <section className="bg-paper">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 py-20 lg:flex-row">
-          <div className="lg:w-2/5">
-            <p className="section-eyebrow">Case studies</p>
-            <h2 className="section-title mt-3">Proof built on relationships.</h2>
-            <p className="section-subtitle mt-4">
-              Every engagement starts with a lifecycle audit and evolves through collaborative sprints. We publish the metrics that matter.
-            </p>
-            <Link href="/case-studies" className="btn-secondary mt-8">
-              Browse case studies
+          <div
+            id="strategy-call"
+            className="scroll-mt-28 mx-auto mt-2 flex max-w-md flex-col items-center gap-2.5 sm:mt-8 sm:max-w-5xl sm:flex-row sm:justify-center sm:gap-4"
+          >
+            <Link
+              href="https://www.lifecycleinbox.com/contact#strategy-call"
+              className="btn-primary w-full max-w-[20rem] py-2.5 text-sm sm:w-auto sm:max-w-none sm:py-3 sm:text-base"
+            >
+              Book a Strategy Call
+            </Link>
+            <Link
+              href="/#design-proof"
+              className="btn-secondary w-full max-w-[20rem] py-2.5 text-sm sm:w-auto sm:max-w-none sm:py-3 sm:text-base"
+            >
+              See Our Work
             </Link>
           </div>
-          <div className="lg:flex-1">
-            <div className="grid gap-6">
-              {caseStudyHighlights.map((study) => (
-                <article key={study.slug} className="card">
-                  <div className="text-xs font-semibold uppercase tracking-[0.35em] text-accent">{study.category}</div>
-                  <h3 className="mt-4 text-2xl font-semibold text-ink">{study.title}</h3>
-                  <p className="mt-3 text-sm text-ink-2">{study.description}</p>
-                  <p className="mt-5 text-sm font-semibold text-ink">Outcome: {study.result}</p>
-                  <Link
-                    href={`/case-studies/${study.slug}`}
-                    className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-ink transition hover:text-accent"
-                  >
-                    Read the case study
-                    <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M5 12h14M13 6l6 6-6 6" />
-                    </svg>
-                  </Link>
+        </div>
+      </section>
+
+      <div id="results" className="scroll-mt-28" />
+      <section id="what-we-build" className="scroll-mt-28 bg-paper">
+        <div className="section-shell pt-10 pb-14 sm:pt-12 sm:pb-16 md:pt-14 md:pb-20">
+          <div className="mx-auto mb-8 max-w-3xl text-center sm:mb-9">
+            <h2 className="section-title">What we&apos;ll build for you.</h2>
+            <p className="mt-3 text-base text-ink-2 sm:text-lg">
+              Snapshot of the backend eCommerce funnel we&apos;re building for your brand.
+            </p>
+          </div>
+          <div className="premium-panel mx-auto max-w-6xl p-3 sm:p-5 md:p-6">
+            <div className="overflow-hidden rounded-[1.35rem] bg-paper">
+              <Image
+                src="/images/Retention-System.png"
+                alt="Retention system diagram showing backend ecommerce funnel architecture"
+                width={1388}
+                height={768}
+                className="h-auto w-full"
+                sizes="(max-width: 1023px) 95vw, 1120px"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-paper">
+        <div className="section-shell pt-10 pb-14 sm:pt-12 sm:pb-16 md:pt-14 md:pb-20">
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="section-eyebrow">Common growth constraints</p>
+            <h2 className="section-title mt-5">Are you struggling with...</h2>
+          </div>
+          <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
+            {strugglePoints.map((item) => (
+              <article key={item.title} className="mx-auto w-full max-w-sm text-center md:max-w-none md:text-left">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-stroke bg-slate/40 md:mx-0">
+                  <IvoryMaskIcon src={item.icon} alt={`${item.title} icon`} />
+                </div>
+                <h3 className="mt-5 text-[1.8rem] font-semibold leading-tight text-ink sm:text-[2rem]">{item.title}</h3>
+                <p className="mt-4 text-base leading-8 text-ink-2">{item.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="process" className="scroll-mt-28 border-t border-stroke bg-paper">
+        <div className="section-shell pt-10 pb-14 sm:pt-12 sm:pb-16 md:pt-14 md:pb-20">
+          <div className="mx-auto max-w-4xl text-center">
+            <h2 className="section-title">
+              Our simple 3-step process to build your <em className="italic">retention engine</em>.
+            </h2>
+            <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-ink-2 sm:text-lg">
+              We help premium ecommerce brands turn more traffic into first-time customers, stronger repeat purchase behavior, and more predictable long-term revenue.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-5 md:grid-cols-3 md:gap-6">
+            {processSteps.map((step) => (
+              <article key={step.title} className="rounded-3xl border border-stroke bg-slate/35 p-7 text-center sm:p-8 md:text-left">
+                <div className="mx-auto inline-flex h-11 w-11 items-center justify-center rounded-full border border-stroke text-ink md:mx-0">
+                  <ProcessLineIcon step={step.title} />
+                </div>
+                <h3 className="mt-5 text-3xl font-semibold text-ink">{step.title}</h3>
+                <p className="mt-4 text-base leading-8 text-ink-2">{step.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div id="email-designs" className="scroll-mt-28" />
+      <section id="design-proof" className="scroll-mt-28 border-t border-stroke bg-paper">
+        <div className="section-shell pt-10 pb-14 sm:pt-12 sm:pb-16 md:pt-14 md:pb-20">
+          <div className="mx-auto max-w-4xl text-center">
+            <h2 className="section-title">
+              Beautiful designs that <em className="italic">convert.</em>
+            </h2>
+            <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-ink-2 sm:text-lg">
+              Our designs not only look good, but they&apos;ll make you more money.
+            </p>
+          </div>
+
+          <p className="mt-10 text-center text-sm text-ink-2">Swipe left or right to explore the designs.</p>
+
+          <div className="-mx-6 mt-8 overflow-x-auto px-6 pb-4 sm:mt-10 sm:pb-5">
+            <div className="flex w-max snap-x snap-mandatory gap-7 sm:gap-8">
+              {designProofItems.map((item) => (
+                <article key={item.title} className="w-[84vw] max-w-[28rem] shrink-0 snap-start sm:w-[26rem]">
+                  <div className="rounded-[1.75rem] border border-stroke bg-slate/50 p-3 sm:p-4">
+                    <div className="overflow-hidden rounded-[1.25rem] bg-paper">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        width={1080}
+                        height={1920}
+                        className="h-auto w-full"
+                        sizes="(max-width: 640px) 84vw, 416px"
+                      />
+                    </div>
+                  </div>
+                  <div className="mx-auto mt-6 max-w-[25rem] text-center">
+                    <h3 className="text-2xl font-semibold text-ink sm:text-[2rem]">{item.title}</h3>
+                    <p className="mt-3 text-base leading-7 text-ink-2">{item.caption}</p>
+                  </div>
                 </article>
               ))}
             </div>
@@ -354,55 +329,95 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-6 py-20">
-        <div className="max-w-3xl">
-          <p className="section-eyebrow">Resources</p>
-          <h2 className="section-title mt-3">Give your lifecycle team a head start.</h2>
-          <p className="section-subtitle mt-4">
-            Guides, templates, and email designs from the Evercurrent operating system.
-          </p>
-        </div>
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
-          {resources.map((resource) => (
-            <article key={resource.title} className="card flex flex-col gap-4">
-              <span className="text-xs font-semibold uppercase tracking-[0.35em] text-accent">{resource.eyebrow}</span>
-              <h3 className="text-2xl font-semibold text-ink">{resource.title}</h3>
-              <p className="text-sm text-ink-2">{resource.description}</p>
-              <Link className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition hover:text-accent" href={resource.href}>
-                View the collection
-                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M13 6l6 6-6 6" />
-                </svg>
-              </Link>
-            </article>
-          ))}
+      <section className="bg-bone/48">
+        <div className="section-shell pt-10 pb-14 sm:pt-12 sm:pb-16 md:pt-14 md:pb-20">
+          <div className="mx-auto max-w-4xl text-center">
+            <h2 className="section-title">How can we help?</h2>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {helpPillars.map((pillar) => (
+              <article key={pillar.title} className="rounded-3xl bg-paper/85 p-7 sm:p-8">
+                <h3 className="text-2xl font-semibold text-ink sm:text-3xl">{pillar.title}</h3>
+                <p className="mt-4 text-sm leading-relaxed text-ink-2 sm:text-base">{pillar.body}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="bg-ink text-paper">
-        <div className="mx-auto flex w-full max-w-6xl flex-col items-start gap-8 px-6 py-20 md:flex-row md:items-center md:justify-between">
-          <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.4em] text-accent-2">Next step</p>
-            <h2 className="mt-4 text-3xl font-semibold md:text-4xl">
-              Audit your lifecycle program with Evercurrent.
-            </h2>
-            <p className="mt-4 text-base text-slate">
-              Get the lifecycle scorecard, roadmap, and revenue model that powers every engagement. We uncover quick wins within 10 business days.
-            </p>
-            <p className="mt-3 text-sm text-slate">
-              Prefer email or phone? Reach us at <a href="mailto:hello@evercurrent.agency" className="underline hover:text-accent">hello@evercurrent.agency</a> or call +1 (401) 992-5475.
+      <div id="testimonials" className="scroll-mt-28" />
+      <section id="faq" className="scroll-mt-28 border-t border-stroke bg-paper">
+        <div className="section-shell pt-10 pb-14 sm:pt-12 sm:pb-16 md:pt-14 md:pb-20">
+          <div className="mx-auto max-w-4xl text-center">
+            <h2 className="section-title">FAQ</h2>
+            <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-ink-2 sm:text-lg">
+              Answers to the questions most brands have before building a stronger retention system.
             </p>
           </div>
-        <div className="flex flex-col gap-4 text-sm font-semibold">
-          <Link href="/contact" className="btn-primary w-full bg-paper text-ink hover:bg-slate sm:w-auto">
-            Book strategy session
-          </Link>
-          <Link href="/audit" className="btn-secondary w-full border-paper text-paper hover:border-accent hover:text-accent sm:w-auto">
-            Request lifecycle audit
-          </Link>
+
+          <div className="mx-auto mt-12 w-full max-w-4xl rounded-[1.75rem] border border-stroke bg-slate/25 px-5 sm:px-8">
+            {faqItems.map((item, index) => (
+              <details
+                key={item.question}
+                className={`group py-5 sm:py-6 ${index !== faqItems.length - 1 ? "border-b border-stroke" : ""}`}
+              >
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-4">
+                  <h3 className="text-left text-xl font-semibold leading-tight text-ink sm:text-2xl">{item.question}</h3>
+                  <span className="mt-1 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-stroke text-ink-2 transition group-open:rotate-45 group-open:text-ink">
+                    +
+                  </span>
+                </summary>
+                <p className="mt-4 max-w-3xl text-base leading-8 text-ink-2">{item.answer}</p>
+              </details>
+            ))}
+          </div>
         </div>
+      </section>
+
+      <div id="trainings" className="scroll-mt-28" />
+      <section id="about" className="scroll-mt-28 bg-slate text-ink">
+        <div className="section-shell pt-12 pb-14 sm:pt-14 sm:pb-16 md:pt-16 md:pb-20">
+          <div className="grid items-center gap-10 md:grid-cols-[0.92fr,1.08fr] md:gap-12">
+            <div className="relative mx-auto h-72 w-72 overflow-hidden rounded-full bg-paper/10 sm:h-80 sm:w-80">
+              <Image src="/images/hero/founder-headshot.jpg" alt="Founder portrait" fill className="object-cover" sizes="320px" />
+            </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-accent-2">Meet the founder</p>
+              <h2 className="mt-4 text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl">
+                Retention should feel as premium as the brand.
+              </h2>
+              <p className="mt-5 text-base leading-relaxed text-ink-2 sm:text-lg">
+                Lifecycle Inbox was built around one idea: growing e-commerce brands should not have to choose
+                between strong performance and strong presentation. We build lifecycle systems that drive repeat revenue
+                without compromising brand quality.
+              </p>
+              <div className="mt-7 flex justify-center md:justify-start">
+                <Link href="https://www.lifecycleinbox.com/contact#strategy-call" className="btn-primary">
+                  Book a Strategy Call
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-paper">
+        <div className="section-shell pt-12 pb-16 text-center sm:pt-14 sm:pb-20 md:pt-16 md:pb-24">
+          <h2 className="section-title mx-auto max-w-4xl">
+            Ready to build a retention system that feels as considered as the brand itself?
+          </h2>
+          <p className="mx-auto mt-5 max-w-3xl text-base text-ink-2 sm:text-lg">
+            Book a strategy call and we will show you where your lifecycle is leaking revenue, what to fix first, and
+            what a premium retention system should look like for your stage.
+          </p>
+          <div className="mt-8">
+            <Link href="https://www.lifecycleinbox.com/contact#strategy-call" className="btn-primary">
+              Book a Strategy Call
+            </Link>
+          </div>
         </div>
       </section>
     </div>
   );
 }
+

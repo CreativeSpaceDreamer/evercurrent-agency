@@ -1,17 +1,17 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
-const collections = [
+const resources = [
   {
-    title: "Guides",
-    summary: "Deep dives into lifecycle architecture, playbooks, and operating cadences.",
-    href: "/resources/guides",
-    items: ["Lifecycle systems blueprint", "Retention forecasting model", "Core 10 QA playbook"]
+    title: "The 8 Flows Every Shopify Brand Needs",
+    description: "A quick guide to the automated flows that create stable repeat revenue."
   },
   {
-    title: "Email designs",
-    summary: "Modular email patterns for lifecycle flows, campaigns, and testing.",
-    href: "/resources/email-designs",
-    items: ["Welcome frameworks", "Drop launch set", "Post-purchase nurture blocks"]
+    title: "Email + SMS Send Plan",
+    description: "A simple way to balance campaigns with lifecycle flows."
+  },
+  {
+    title: "Retention Metrics Cheat Sheet",
+    description: "Definitions and targets for the metrics that actually matter."
   }
 ];
 
@@ -21,43 +21,48 @@ export default function ResourcesPage() {
       <section className="bg-paper">
         <div className="mx-auto w-full max-w-6xl px-6 py-20">
           <p className="section-eyebrow">Resources</p>
-          <h1 className="mt-4 text-5xl font-semibold text-ink md:text-6xl">Resources for lifecycle operators.</h1>
+          <h1 className="mt-4 text-5xl font-semibold text-ink md:text-6xl">Resources for clearer retention decisions.</h1>
           <p className="mt-6 max-w-2xl text-lg text-ink-2">
-            Frameworks, checklists, and email designs used inside Evercurrent engagements. Download, adapt, and ship faster.
+            Practical tools and frameworks to help you map the customer journey and prioritize the right lifecycle work.
           </p>
-          <Link href="/audit" className="btn-primary mt-8 text-base">
-            Get lifecycle audit
-          </Link>
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <Link href="/contact" className="btn-primary text-base">
+              Work with us
+            </Link>
+            <Link href="https://www.lifecycleinbox.com/contact#strategy-call" className="btn-secondary text-base">
+              Book a strategy call
+            </Link>
+          </div>
         </div>
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-6 py-20">
-        <div className="grid gap-6 md:grid-cols-2">
-          {collections.map((collection) => (
-            <article key={collection.title} className="card flex flex-col gap-5">
-              <div>
-                <h2 className="text-3xl font-semibold text-ink">{collection.title}</h2>
-                <p className="mt-3 text-sm text-ink-2">{collection.summary}</p>
-              </div>
-              <ul className="space-y-2 text-sm text-ink">
-                {collection.items.map((item) => (
-                  <li key={item} className="flex items-center gap-2">
-                    <span className="h-2 w-2 rounded-full bg-accent" aria-hidden="true" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <Link href={collection.href} className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition hover:text-accent">
-                Explore {collection.title.toLowerCase()}
-                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M13 6l6 6-6 6" />
-                </svg>
-              </Link>
-            </article>
-          ))}
+        <div className="grid gap-6 md:grid-cols-[2fr,3fr]">
+          <article className="card">
+            <h2 className="text-3xl font-semibold text-ink">Lifecycle Clarity Worksheet</h2>
+            <p className="mt-4 text-sm text-ink-2">
+              Map the customer journey, find gaps, and choose the next three flows to fix.
+            </p>
+            <p className="mt-4 text-sm text-ink-2">
+              How you get it: apply for a free audit. If it’s a fit, we’ll send the worksheet with your scorecard within 24–48 hours.
+            </p>
+            <Link href="https://www.lifecycleinbox.com/contact#strategy-call" className="btn-secondary mt-6 w-full sm:w-auto">
+              Book a strategy call
+            </Link>
+            <p className="mt-4 text-xs text-ink-2">
+              No spam. If you don’t see the email, check Promotions or Spam.
+            </p>
+          </article>
+          <div className="grid gap-6 md:grid-cols-3">
+            {resources.map((resource) => (
+              <article key={resource.title} className="card">
+                <h3 className="text-xl font-semibold text-ink">{resource.title}</h3>
+                <p className="mt-3 text-sm text-ink-2">{resource.description}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
     </div>
   );
 }
-

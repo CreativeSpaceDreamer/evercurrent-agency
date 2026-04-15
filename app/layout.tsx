@@ -1,31 +1,56 @@
-﻿import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import type { Metadata } from "next";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { AnalyticsScripts } from "@/components/analytics";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-display" });
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-montserrat"
+});
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://evercurrent.agency"),
+  metadataBase: new URL("https://lifecycleinbox.com"),
   title: {
-    default: "Evercurrent.agency | Relationship-first lifecycle marketing",
-    template: "%s | Evercurrent.agency"
+    default: "Lifecycle Inbox | E-commerce Email & SMS Retention Systems",
+    template: "%s | Lifecycle Inbox"
   },
-  description: "Evercurrent.agency builds retention programs that make customers feel known, valued, and eager for what comes next.",
+  description:
+    "Lifecycle Inbox builds strategy-led email and SMS retention systems for growing e-commerce brands using Klaviyo and Omnisend. Drive customer loyalty and lifetime value.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" }
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: ["/favicon.ico"]
+  },
   openGraph: {
-    title: "Evercurrent.agency",
-    description: "Relationship-first lifecycle marketing for modern retention teams.",
-    url: "https://evercurrent.agency",
-    siteName: "Evercurrent.agency",
+    title: "Lifecycle Inbox | E-commerce Email & SMS Retention Systems",
+    description:
+      "Senior-led lifecycle strategy, flows, campaigns, SMS, and optimization for growing e-commerce brands. Maximize customer lifetime value.",
+    url: "https://lifecycleinbox.com",
+    siteName: "Lifecycle Inbox",
+    images: [
+      {
+        url: "/evercurrent_icon_wave_circle_primary_512.png",
+        width: 512,
+        height: 512,
+        alt: "Lifecycle Inbox wave-circle logo"
+      }
+    ],
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: "Evercurrent.agency",
-    description: "Relationship-first lifecycle marketing."
+    title: "Lifecycle Inbox | E-commerce Email & SMS Retention Systems",
+    description:
+      "Senior-led lifecycle strategy, flows, campaigns, SMS, and optimization for growing e-commerce brands. Maximize customer lifetime value.",
+    images: ["/evercurrent_icon_wave_circle_primary_512.png"]
   }
 };
 
@@ -35,8 +60,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
-      <body className="bg-slate text-ink antialiased">
+    <html lang="en" className={montserrat.variable} suppressHydrationWarning>
+      <body className="bg-paper text-ink antialiased">
         <SiteHeader />
         <main className="min-h-[calc(100vh-18rem)]">{children}</main>
         <SiteFooter />

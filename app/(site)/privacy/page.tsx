@@ -1,4 +1,4 @@
-﻿export default function PrivacyPage() {
+export default function PrivacyPage() {
   return (
     <div className="bg-slate">
       <section className="bg-paper">
@@ -12,7 +12,7 @@
             <section>
               <h2 className="text-lg font-semibold text-ink">1. Overview</h2>
               <p className="mt-2">
-                Evercurrent.agency (“we”, “our”, “us”) provides lifecycle marketing services. This policy explains how we collect, use, and safeguard personal information when you visit our website or engage our services.
+                lifecycleinbox.com (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) provides lifecycle marketing services. This policy explains how we collect, use, and safeguard personal information when you visit our website or engage our services.
               </p>
             </section>
             <section>
@@ -46,13 +46,19 @@
             <section>
               <h2 className="text-lg font-semibold text-ink">6. Your rights</h2>
               <p className="mt-2">
-                You may request access, correction, or deletion of your personal information. Contact <a href="mailto:privacy@evercurrent.agency" className="underline">privacy@evercurrent.agency</a> to exercise these rights.
+                You may request access, correction, or deletion of your personal information. Contact <a href="mailto:privacy@lifecycleinbox.com" className="underline">privacy@lifecycleinbox.com</a> to exercise these rights.
               </p>
             </section>
             <section>
-              <h2 className="text-lg font-semibold text-ink">7. Contact</h2>
+              <h2 className="text-lg font-semibold text-ink">7. SMS Privacy</h2>
               <p className="mt-2">
-                Questions? Email <a href="mailto:privacy@evercurrent.agency" className="underline">privacy@evercurrent.agency</a>.
+                If you opt in to receive SMS messages from Lifecycle Inbox, we will use your phone number only for customer support and scheduling communications. We do not sell your phone number. Message frequency varies. Message & data rates may apply. You can opt out at any time by replying STOP.
+              </p>
+            </section>
+            <section>
+              <h2 className="text-lg font-semibold text-ink">8. Contact</h2>
+              <p className="mt-2">
+                Questions? Email <a href="mailto:privacy@lifecycleinbox.com" className="underline">privacy@lifecycleinbox.com</a>.
               </p>
             </section>
           </div>

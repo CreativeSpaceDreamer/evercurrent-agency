@@ -1,6 +1,6 @@
-﻿# Evercurrent.agency Website
+﻿# Lifecycle Inbox Website
 
-This project is a Next.js 14 (App Router) build styled with Tailwind CSS for the Evercurrent.agency launch kit. It includes a services hub, vertical service pages, case studies, resources, audit and contact funnels, plus legal pages.
+This project is a Next.js 14 (App Router) build styled with Tailwind CSS for the lifecycleinbox.com launch kit. It includes a services hub, vertical service pages, case studies, resources, audit and contact funnels, plus legal pages.
 
 ## Getting Started
 
@@ -16,7 +16,7 @@ Development server runs at `http://localhost:3000`.
 Copy `.env.example` to `.env.local` (or configure in your hosting provider) and populate:
 
 - `ZAPIER_WEBHOOK_URL` – Zapier Catch Hook URL that stores new leads.
-- `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` – Plausible domain (e.g. `evercurrent.agency`).
+- `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` – Plausible domain (e.g. `lifecycleinbox.com`).
 - `NEXT_PUBLIC_PLAUSIBLE_SCRIPT_SRC` (optional) – override Plausible script source if self-hosting.
 
 ## Production Build

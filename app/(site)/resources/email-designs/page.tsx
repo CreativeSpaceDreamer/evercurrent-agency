@@ -1,4 +1,4 @@
-﻿const patterns = [
+const patterns = [
   {
     name: "Welcome frameworks",
     description: "Three variants covering offer-led, content-led, and quiz-led welcomes with personalization tokens.",
@@ -45,13 +45,13 @@ export default function EmailDesignsPage() {
                 ))}
               </ul>
               <p className="text-sm text-ink-2">
-                Available as Figma, HTML, and Klaviyo templates. Delivered post-audit with setup instructions and testing notes.
+                Available as Figma, HTML, and Klaviyo templates. Shared on request with setup instructions and testing notes.
               </p>
             </article>
           ))}
         </div>
         <p className="mt-10 text-sm text-ink-2">
-          Request sample exports by emailing <a className="underline hover:text-accent" href="mailto:designs@evercurrent.agency">designs@evercurrent.agency</a>.
+          Request sample exports by emailing <a className="underline hover:text-accent" href="mailto:designs@lifecycleinbox.com">designs@lifecycleinbox.com</a>.
         </p>
       </section>
     </div>

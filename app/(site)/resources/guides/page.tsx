@@ -1,9 +1,9 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
 const guides = [
   {
     title: "Lifecycle Systems Blueprint",
-    description: "Step-by-step build of the Evercurrent operating system with templates.",
+    description: "Step‑by‑step lifecycle playbook with practical templates.",
     length: "32 pages",
     format: "PDF"
   },
@@ -14,8 +14,8 @@ const guides = [
     format: "Sheet"
   },
   {
-    title: "Core 10 QA Playbook",
-    description: "Checklists for flows, campaigns, deliverability, and compliance sign-off.",
+    title: "Core 10 Quality Checks Playbook",
+    description: "Checklists for flows, campaigns, inbox health, and compliance sign‑off.",
     length: "16 pages",
     format: "Notion"
   }
@@ -27,9 +27,9 @@ export default function GuidesPage() {
       <section className="bg-paper">
         <div className="mx-auto w-full max-w-5xl px-6 py-20">
           <p className="section-eyebrow">Resources · Guides</p>
-          <h1 className="mt-4 text-5xl font-semibold text-ink md:text-6xl">Guides to install the Evercurrent system.</h1>
+          <h1 className="mt-4 text-5xl font-semibold text-ink md:text-6xl">Guides to build a clear retention playbook.</h1>
           <p className="mt-6 text-lg text-ink-2">
-            Download the playbooks we use internally to operationalize lifecycle marketing.
+            Download the playbooks we use to run lifecycle marketing.
           </p>
         </div>
       </section>
@@ -43,14 +43,15 @@ export default function GuidesPage() {
                 <p className="mt-3 text-sm text-ink-2">{guide.description}</p>
                 <p className="mt-2 text-xs uppercase tracking-[0.35em] text-accent">{guide.length} · {guide.format}</p>
               </div>
-              <Link href="/audit" className="btn-primary">
-                Access via audit
+              <Link href="https://www.lifecycleinbox.com/contact#strategy-call" className="btn-primary">
+                Book a strategy call
               </Link>
             </article>
           ))}
         </div>
         <p className="mt-10 text-sm text-ink-2">
-          Access all guides after your lifecycle audit, or request a specific resource by emailing <a href="mailto:hello@evercurrent.agency" className="underline hover:text-accent">hello@evercurrent.agency</a>.
+          Access guides after your application review, or request a specific resource by emailing{" "}
+          <a href="mailto:hello@lifecycleinbox.com" className="underline hover:text-accent">hello@lifecycleinbox.com</a>.
         </p>
       </section>
     </div>

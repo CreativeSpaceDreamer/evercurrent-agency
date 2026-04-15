@@ -1,4 +1,4 @@
-﻿export default function TermsPage() {
+export default function TermsPage() {
   return (
     <div className="bg-slate">
       <section className="bg-paper">
@@ -12,7 +12,7 @@
             <section>
               <h2 className="text-lg font-semibold text-ink">1. Acceptance</h2>
               <p className="mt-2">
-                By accessing Evercurrent.agency or engaging our services, you agree to these terms. If you represent an organization, you warrant that you have authority to bind it.
+                By accessing lifecycleinbox.com or engaging our services, you agree to these terms. If you represent an organization, you warrant that you have authority to bind it.
               </p>
             </section>
             <section>
@@ -38,7 +38,7 @@
             <section>
               <h2 className="text-lg font-semibold text-ink">5. Intellectual property</h2>
               <p className="mt-2">
-                Upon full payment, work product created for you is assigned to your organization. Internal frameworks and know-how remain Evercurrent.agency’s IP.
+                Upon full payment, work product created for you is assigned to your organization. Internal frameworks and know-how remain lifecycleinbox.com&apos;s IP.
               </p>
             </section>
             <section>
@@ -54,9 +54,15 @@
               </p>
             </section>
             <section>
-              <h2 className="text-lg font-semibold text-ink">8. Contact</h2>
+              <h2 className="text-lg font-semibold text-ink">8. SMS Terms</h2>
               <p className="mt-2">
-                Legal notices: <a href="mailto:legal@evercurrent.agency" className="underline">legal@evercurrent.agency</a>.
+                By opting in to SMS, you agree to receive customer support and scheduling messages from Lifecycle Inbox. Message frequency varies. Message & data rates may apply. Reply STOP to unsubscribe, HELP for help.
+              </p>
+            </section>
+            <section>
+              <h2 className="text-lg font-semibold text-ink">9. Contact</h2>
+              <p className="mt-2">
+                Legal notices: <a href="mailto:legal@lifecycleinbox.com" className="underline">legal@lifecycleinbox.com</a>.
               </p>
             </section>
           </div>

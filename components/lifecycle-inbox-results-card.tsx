@@ -29,46 +29,46 @@ export default function LifecycleInboxResultsCard() {
         <section className="relative overflow-hidden rounded-[60px] border border-white/8 bg-[radial-gradient(circle_at_76%_50%,rgba(113,42,20,0.34),transparent_34%),linear-gradient(90deg,#070809_0%,#0b0b0c_34%,#130d0b_72%,#1d0e09_100%)] shadow-[0_32px_120px_rgba(0,0,0,0.55)]">
           <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),transparent_25%,transparent_75%,rgba(255,255,255,0.01))]" />
 
-          <div className="relative grid min-h-[600px] grid-cols-1 gap-0 px-[40px] py-[40px] lg:grid-cols-[0.48fr_0.52fr] lg:gap-0 lg:px-[50px] lg:py-[50px]">
-            <div className="flex h-full flex-col pr-0 lg:pr-[30px]">
+          <div className="relative grid min-h-[300px] grid-cols-1 gap-0 px-[20px] py-[20px] lg:grid-cols-[0.45fr_0.55fr] lg:gap-0 lg:px-[25px] lg:py-[25px]">
+            <div className="flex h-full flex-col pr-0 lg:pr-[15px]">
               <div>
-                <h2 className="max-w-[600px] text-[40px] font-semibold leading-[1.02] tracking-[-0.055em] text-[#f4efe8] md:text-[50px] lg:text-[60px]">
+                <h2 className="max-w-[400px] text-[24px] font-semibold leading-[1.02] tracking-[-0.055em] text-[#f4efe8] md:text-[28px] lg:text-[32px]">
                   $43,218 Increase In Email Revenue
                 </h2>
 
-                <p className="mt-[20px] max-w-[500px] text-[16px] leading-[1.45] tracking-[-0.03em] text-[#b7afa6] md:text-[18px] lg:text-[20px]">
+                <p className="mt-[12px] max-w-[350px] text-[12px] leading-[1.45] tracking-[-0.03em] text-[#b7afa6] md:text-[14px] lg:text-[16px]">
                   A skincare brand approached us because retention was underperforming. We boosted their
                   email-attributed revenue from 17.9% to 27.4%, driving stronger performance from owned
                   channels.
                 </p>
               </div>
 
-              <div className="mt-[70px]">
-                <h3 className="text-[36px] font-semibold leading-[1.02] tracking-[-0.055em] text-[#f4efe8] md:text-[40px] lg:text-[45px]">
+              <div className="mt-[35px]">
+                <h3 className="text-[20px] font-semibold leading-[1.02] tracking-[-0.055em] text-[#f4efe8] md:text-[22px] lg:text-[24px]">
                   After Lifecycle Inbox:
                 </h3>
 
-                <div className="mt-[25px] space-y-[16px]">
+                <div className="mt-[12px] space-y-[8px]">
                   {bullets.map((bullet) => (
-                    <div key={bullet} className="flex items-start gap-[12px]">
-                      <div className="mt-[5px] flex h-[16px] w-[16px] shrink-0 items-center justify-center text-[#d55f3f]">
-                        <Check className="h-[14px] w-[14px]" strokeWidth={2.4} />
+                    <div key={bullet} className="flex items-start gap-[8px]">
+                      <div className="mt-[2px] flex h-[10px] w-[10px] shrink-0 items-center justify-center text-[#d55f3f]">
+                        <Check className="h-[9px] w-[9px]" strokeWidth={2.4} />
                       </div>
-                      <p className="text-[16px] leading-[1.38] tracking-[-0.03em] text-[#b7afa6] md:text-[18px] lg:text-[20px]">{bullet}</p>
+                      <p className="text-[12px] leading-[1.38] tracking-[-0.03em] text-[#b7afa6] md:text-[14px] lg:text-[16px]">{bullet}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="mt-auto pt-[40px]">
-                <div className="inline-flex items-center rounded-full border border-[#3b3d40] bg-transparent px-[18px] py-[10px] text-[13px] font-medium leading-none tracking-[-0.03em] text-[#f1ece5] md:text-[14px]">
+              <div className="mt-auto pt-[20px]">
+                <div className="inline-flex items-center rounded-full border border-[#3b3d40] bg-transparent px-[9px] py-[5px] text-[8px] font-medium leading-none tracking-[-0.03em] text-[#f1ece5] md:text-[9px]">
                   Results #1
                 </div>
               </div>
             </div>
 
-            <div className="mt-[40px] flex h-full flex-col pl-0 lg:mt-0 lg:pl-[15px]">
-              <div className="space-y-[25px]">
+            <div className="mt-[20px] flex h-full flex-col pl-0 lg:mt-0 lg:pl-[8px]">
+              <div className="space-y-[15px]">
                 <SnapshotCard
                   totalRevenue="$241,386.72"
                   attributedRevenue="$43,208.23"
@@ -92,7 +92,7 @@ export default function LifecycleInboxResultsCard() {
                 />
               </div>
 
-              <div className="mt-[40px] grid grid-cols-2 gap-[20px] px-[2px]">
+              <div className="mt-[20px] grid grid-cols-2 gap-[10px] px-[1px]">
                 <BottomKpi label="List Growth" value="+58%" />
                 <BottomKpi label="Campaign Revenue" value="+179%" />
               </div>
@@ -129,7 +129,7 @@ function SnapshotCard({
   metrics: Metric[];
 }) {
   return (
-    <div className="overflow-hidden rounded-[12px] border border-[#d8d8d8] bg-[#f3f3f3] text-[#323232] shadow-[0_4px_0_rgba(255,255,255,0.55)_inset]">
+    <div className="overflow-hidden rounded-[6px] border border-[#d8d8d8] bg-[#f3f3f3] text-[#323232] shadow-[0_4px_0_rgba(255,255,255,0.55)_inset]">
       <div className="grid grid-cols-2 border-b border-[#d9d9d9]">
         <MetricPanel
           label="Total revenue"
@@ -146,22 +146,22 @@ function SnapshotCard({
         />
       </div>
 
-      <div className="px-[10px] pt-[12px] pb-[8px]">
-        <div className="text-[8px] font-semibold leading-none tracking-[-0.02em] text-[#3d3d3d]">
+      <div className="px-[5px] pt-[6px] pb-[4px]">
+        <div className="text-[4px] font-semibold leading-none tracking-[-0.02em] text-[#3d3d3d]">
           Attributed revenue
         </div>
 
-        <div className="mt-[10px] grid grid-cols-5 gap-0">
+        <div className="mt-[5px] grid grid-cols-5 gap-0">
           {metrics.map((metric, index) => (
             <div
               key={metric.label}
-              className={index === 0 ? "pr-[10px]" : "border-l border-[#dfdfdf] pl-[10px]"}
+              className={index === 0 ? "pr-[5px]" : "border-l border-[#dfdfdf] pl-[5px]"}
             >
-              <div className="flex items-center gap-[3px] text-[9px] font-semibold leading-none tracking-[-0.02em] text-[#666666]">
+              <div className="flex items-center gap-[1.5px] text-[4.5px] font-semibold leading-none tracking-[-0.02em] text-[#666666]">
                 <MiniIcon kind={metric.label} />
                 <span>{metric.label}</span>
               </div>
-              <div className="mt-[6px] text-[10px] font-semibold leading-none tracking-[-0.02em] text-[#4f4f4f]">
+              <div className="mt-[3px] text-[5px] font-semibold leading-none tracking-[-0.02em] text-[#4f4f4f]">
                 {metric.value}
               </div>
             </div>
@@ -186,15 +186,15 @@ function MetricPanel({
   addDivider?: boolean;
 }) {
   return (
-    <div className={`px-[12px] pt-[8px] pb-[9px] ${addDivider ? "border-r border-[#d9d9d9]" : ""}`}>
-      <div className="text-[8px] font-semibold leading-none tracking-[-0.02em] text-[#5f5f5f]">{value}</div>
-      <div className="mt-[6px] text-[7px] font-semibold leading-none tracking-[-0.01em] text-[#666666]">{label}</div>
+    <div className={`px-[6px] pt-[4px] pb-[4.5px] ${addDivider ? "border-r border-[#d9d9d9]" : ""}`}>
+      <div className="text-[4px] font-semibold leading-none tracking-[-0.02em] text-[#5f5f5f]">{value}</div>
+      <div className="mt-[3px] text-[3.5px] font-semibold leading-none tracking-[-0.01em] text-[#666666]">{label}</div>
       <div
-        className={`mt-[8px] inline-flex items-center gap-[3px] rounded-full px-[4px] py-[2.5px] text-[6px] font-semibold leading-none ${
+        className={`mt-[4px] inline-flex items-center gap-[1.5px] rounded-full px-[2px] py-[1.25px] text-[3px] font-semibold leading-none ${
           positive ? "bg-[#edf5ee] text-[#7dae82]" : "bg-[#f6ece9] text-[#d09582]"
         }`}
       >
-        {positive ? <ArrowUpRight className="h-[6.5px] w-[6.5px]" /> : <ArrowDownRight className="h-[6.5px] w-[6.5px]" />}
+        {positive ? <ArrowUpRight className="h-[3.25px] w-[3.25px]" /> : <ArrowDownRight className="h-[3.25px] w-[3.25px]" />}
         <span>{change}</span>
         <span className="font-semibold text-[#6f6f6f]">vs. previous period</span>
       </div>
@@ -205,7 +205,7 @@ function MetricPanel({
 function MiniIcon({ kind }: { kind: string }) {
   if (kind === "Per recipient") {
     return (
-      <svg viewBox="0 0 24 24" className="h-[9px] w-[9px]" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <svg viewBox="0 0 24 24" className="h-[4.5px] w-[4.5px]" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
         <circle cx="9" cy="7" r="4" />
         <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
@@ -216,7 +216,7 @@ function MiniIcon({ kind }: { kind: string }) {
 
   if (kind === "Campaigns") {
     return (
-      <svg viewBox="0 0 24 24" className="h-[9px] w-[9px]" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <svg viewBox="0 0 24 24" className="h-[4.5px] w-[4.5px]" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="m3 20 18-8L3 4v6l13 2-13 2v6Z" />
       </svg>
     );
@@ -224,7 +224,7 @@ function MiniIcon({ kind }: { kind: string }) {
 
   if (kind === "Flows") {
     return (
-      <svg viewBox="0 0 24 24" className="h-[9px] w-[9px]" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <svg viewBox="0 0 24 24" className="h-[4.5px] w-[4.5px]" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="6" cy="6" r="3" />
         <circle cx="18" cy="6" r="3" />
         <circle cx="12" cy="18" r="3" />
@@ -236,7 +236,7 @@ function MiniIcon({ kind }: { kind: string }) {
 
   if (kind === "Email") {
     return (
-      <svg viewBox="0 0 24 24" className="h-[9px] w-[9px]" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <svg viewBox="0 0 24 24" className="h-[4.5px] w-[4.5px]" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="5" width="18" height="14" rx="2" />
         <path d="m3 7 9 6 9-6" />
       </svg>
@@ -244,7 +244,7 @@ function MiniIcon({ kind }: { kind: string }) {
   }
 
   return (
-    <svg viewBox="0 0 24 24" className="h-[9px] w-[9px]" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <svg viewBox="0 0 24 24" className="h-[4.5px] w-[4.5px]" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="12" cy="12" r="9" />
       <path d="M8 12h8" />
       <path d="M12 8v8" />
@@ -255,8 +255,8 @@ function MiniIcon({ kind }: { kind: string }) {
 function BottomKpi({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <div className="text-[20px] font-normal leading-none tracking-[-0.04em] text-[#f2ece4]">{label}</div>
-      <div className="mt-[13px] text-[42px] font-light leading-[0.9] tracking-[-0.07em] text-[#d8d0c7]">
+      <div className="text-[16px] font-normal leading-none tracking-[-0.04em] text-[#f2ece4]">{label}</div>
+      <div className="mt-[10px] text-[48px] font-light leading-[0.9] tracking-[-0.07em] text-[#d8d0c7]">
         {value}
       </div>
     </div>

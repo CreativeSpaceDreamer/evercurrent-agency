@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import LifecycleInboxResultsCard from "@/components/lifecycle-inbox-results-card";
 
 function IvoryMaskIcon({ src, alt }: { src: string; alt: string }) {
   return (
@@ -328,6 +329,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <div id="results" className="scroll-mt-28" />
+      <LifecycleInboxResultsCard />
 
       <section className="bg-bone/48">
         <div className="section-shell pt-10 pb-14 sm:pt-12 sm:pb-16 md:pt-14 md:pb-20">

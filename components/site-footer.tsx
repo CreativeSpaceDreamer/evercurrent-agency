@@ -4,13 +4,7 @@ export function SiteFooter() {
   return (
     <footer className="bg-espresso text-paper">
       <div className="mx-auto max-w-6xl px-6 py-16">
-        <div className="grid gap-10 md:grid-cols-[240px,1fr] items-start">
-          <div className="flex items-start">
-            <div className="max-w-[220px]">
-              <p className="text-2xl font-semibold text-paper">Lifecycle Inbox</p>
-            </div>
-          </div>
-
+        <div className="grid gap-10 items-start">
           <div className="space-y-12">
             <div>
               <h2 className="text-2xl font-semibold text-paper mb-3">

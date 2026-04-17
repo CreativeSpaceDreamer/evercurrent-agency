@@ -12,7 +12,7 @@ export default function LifecycleInboxResultsCard() {
         <div className="flex justify-center">
           <div className="w-full" style={{ maxWidth: 'calc(100vw - 650px)' }}>
             <Image
-              src="/images/hero/results-section-fresh.jpg"
+              src="/images/hero/trueresults.png"
               alt="Results and testimonials"
               width={1658}
               height={768}

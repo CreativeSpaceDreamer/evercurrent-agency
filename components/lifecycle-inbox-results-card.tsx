@@ -11,12 +11,22 @@ export default function LifecycleInboxResultsCard() {
         </div>
         <div className="flex justify-center">
           <div className="w-full px-4 lg:px-[325px]">
+            {/* Desktop image */}
             <Image
               src="/images/hero/trueresults.png"
               alt="Results and testimonials"
               width={1658}
               height={768}
-              className="rounded-3xl w-full h-auto"
+              className="hidden sm:block rounded-3xl w-full h-auto"
+              priority
+            />
+            {/* Mobile image */}
+            <Image
+              src="/images/hero/resultsmobile.png"
+              alt="Results and testimonials (mobile)"
+              width={900}
+              height={900}
+              className="block sm:hidden rounded-3xl w-full h-auto"
               priority
             />
           </div>

@@ -10,8 +10,8 @@ export default function LifecycleInboxResultsCard() {
           </h2>
         </div>
         <div className="flex justify-center">
-          <div className="w-full px-4 lg:px-[325px]">
-            {/* Desktop image */}
+          <div className="w-full px-4 lg:px-[325px] flex flex-col gap-8">
+            {/* First row: Desktop and Mobile images */}
             <Image
               src="/images/hero/trueresults.png"
               alt="Results and testimonials"
@@ -20,7 +20,6 @@ export default function LifecycleInboxResultsCard() {
               className="hidden sm:block rounded-3xl w-full h-auto"
               priority
             />
-            {/* Mobile image */}
             <Image
               src="/images/hero/resultsmobile.png"
               alt="Results and testimonials (mobile)"
@@ -28,6 +27,21 @@ export default function LifecycleInboxResultsCard() {
               height={900}
               className="block sm:hidden rounded-3xl w-full h-auto"
               priority
+            />
+            {/* Second row: Desktop and Mobile images */}
+            <Image
+              src="/images/hero/resultsdesktop2.png"
+              alt="Results and testimonials 2"
+              width={1658}
+              height={768}
+              className="hidden sm:block rounded-3xl w-full h-auto"
+            />
+            <Image
+              src="/images/hero/resultsmobile2.png"
+              alt="Results and testimonials 2 (mobile)"
+              width={900}
+              height={900}
+              className="block sm:hidden rounded-3xl w-full h-auto"
             />
           </div>
         </div>

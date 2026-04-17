@@ -14,8 +14,8 @@ export default function LifecycleInboxResultsCard() {
             <Image
               src="/images/hero/results-section.png"
               alt="Results and testimonials"
-              width={1200}
-              height={600}
+              width={1658}
+              height={768}
               className="rounded-3xl w-full h-auto"
               priority
             />

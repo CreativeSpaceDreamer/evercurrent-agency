@@ -9,15 +9,15 @@ export default function LifecycleInboxResultsCard() {
             Results & Testimonials
           </h2>
         </div>
-
-        <div className="overflow-hidden rounded-[40px] border border-white/10 bg-[#120a05] shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
-          <div className="relative h-[320px] sm:h-[420px]">
+        <div className="flex justify-center">
+          <div className="w-full" style={{ maxWidth: 'calc(100vw - 650px)' }}>
             <Image
-              src="/images/hero/test.png"
+              src="/images/hero/results-section.png"
               alt="Results and testimonials"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 1200px"
+              width={1200}
+              height={600}
+              className="rounded-3xl w-full h-auto"
+              priority
             />
           </div>
         </div>

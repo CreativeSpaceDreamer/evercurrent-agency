@@ -12,7 +12,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 bg-paper/95 backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-2 px-4 py-2 sm:gap-3 sm:px-6 sm:py-4">
         <Link href="/#home" className="flex items-center gap-2 sm:gap-3" aria-label="Lifecycle Inbox home">
-          <span className="font-display text-[1.75rem] font-semibold lowercase leading-none text-ink sm:text-3xl">lifecycle inbox</span>
+          <span className="font-display text-[1.75rem] font-semibold leading-none text-ink sm:text-3xl">Lifecycle Inbox</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex" aria-label="Page sections">
           {navLinks.map((link) => (

@@ -25,10 +25,10 @@ export function SiteFooter() {
               </form>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-2">
+            <div className="grid gap-8 md:grid-cols-2 text-center md:text-left">
               <div>
                 <h4 className="text-sm font-semibold uppercase tracking-[0.35em] text-stroke mb-5">Links</h4>
-                <ul className="space-y-4">
+                <ul className="space-y-4 flex flex-col items-center md:items-start">
                   <li>
                     <Link href="#testimonials" className="text-sm text-paper hover:text-accent-2 transition-colors">
                       Testimonial
@@ -54,7 +54,7 @@ export function SiteFooter() {
 
               <div>
                 <h4 className="text-sm font-semibold uppercase tracking-[0.35em] text-stroke mb-5">Socials</h4>
-                <ul className="space-y-4">
+                <ul className="space-y-4 flex flex-col items-center md:items-start">
                   <li>
                     <a
                       href="https://www.youtube.com/@LifecycleInbox"

@@ -11,27 +11,62 @@ const navLinks = [
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 bg-paper/95 backdrop-blur">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-2 px-4 py-2 sm:gap-3 sm:px-6 sm:py-4">
-        <Link href="/#home" className="flex items-center gap-2 sm:gap-3" aria-label="Lifecycle Inbox home">
+      <div
+        className="mx-auto flex w-full max-w-6xl items-center justify-between gap-2 px-2 sm:px-6"
+        style={{ minHeight: '64px', height: '72px', maxHeight: '88px' }}
+      >
+        <Link
+          href="/#home"
+          className="flex items-center"
+          aria-label="Lifecycle Inbox home"
+          style={{ minWidth: '180px', flexShrink: 0 }}
+        >
           <Image
             src="/lifecycle-inbox-logo.png"
             alt="Lifecycle Inbox Logo"
-            width={360}
-            height={96}
+            width={400}
+            height={88}
             priority
-            className="h-16 w-auto sm:h-24 object-contain"
+            className="object-contain select-none"
+            style={{
+              height: '28px',
+              maxHeight: '44px',
+              width: 'auto',
+              lineHeight: 1,
+              display: 'block',
+            }}
+            sizes="(max-width: 639px) 120px, (max-width: 1023px) 180px, 320px"
           />
+          <style jsx global>{`
+            @media (min-width: 640px) {
+              .lifecycle-logo {
+                height: 36px !important;
+                max-height: 36px !important;
+              }
+            }
+            @media (min-width: 1024px) {
+              .lifecycle-logo {
+                height: 44px !important;
+                max-height: 44px !important;
+              }
+            }
+          `}</style>
         </Link>
-        <nav className="hidden items-center gap-6 md:flex" aria-label="Page sections">
+        <nav className="hidden items-center gap-5 md:flex" aria-label="Page sections">
           {navLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="text-sm font-semibold text-ink transition hover:text-accent">
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-xs sm:text-sm font-semibold text-ink transition hover:text-accent"
+              style={{ letterSpacing: '0.01em' }}
+            >
               {link.label}
             </Link>
           ))}
         </nav>
         <Link
           href="https://www.lifecycleinbox.com/contact#strategy-call"
-          className="btn-primary shrink-0 px-3 py-1.5 text-[11px] sm:px-6 sm:py-3 sm:text-sm"
+          className="btn-primary shrink-0 px-2 py-1.5 text-[10px] sm:px-5 sm:py-3 sm:text-xs"
         >
           <span className="sm:hidden">Book Call</span>
           <span className="hidden sm:inline">Book a Strategy Call</span>

@@ -63,7 +63,7 @@ export function SiteHeader() {
                 padding: 0,
                 transition: 'font-size 0.2s, margin-left 0.2s',
               }}
-              className="ml-[0.17em] sm:text-[44px] sm:ml-[0.2em]"
+              className="ml-[0.17em] sm:text-[44px] sm:ml-[0.35em]"
             >
               Inbox
             </span>

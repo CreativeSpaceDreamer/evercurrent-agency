@@ -83,7 +83,11 @@ export default function LifecycleInboxResultsCard() {
                           className="block sm:hidden rounded-3xl w-full h-auto"
                         />
             {/* Testimonial carousel (infinity scroll) */}
-            <div className="w-full mt-4">
+            <div className="w-full mt-4 relative">
+              {/* Mobile scroll hint */}
+              <div className="sm:hidden flex justify-center mb-2">
+                <span className="text-xs text-stone">Swipe to see more →</span>
+              </div>
               <div
                 ref={carouselRef}
                 className="flex gap-4 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-300 py-2"

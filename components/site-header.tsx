@@ -59,12 +59,11 @@ export function SiteHeader() {
                 color: '#111',
                 lineHeight: 1,
                 display: 'inline-block',
-                marginLeft: '0.17em', // mobile default
                 margin: 0,
                 padding: 0,
                 transition: 'font-size 0.2s, margin-left 0.2s',
               }}
-              className="sm:text-[44px] sm:ml-[0.2em]"
+              className="ml-[0.17em] sm:text-[44px] sm:ml-[0.2em]"
             >
               Inbox
             </span>

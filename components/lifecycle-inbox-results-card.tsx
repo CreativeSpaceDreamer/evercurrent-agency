@@ -4,24 +4,29 @@ import { useRef, useEffect } from "react";
 export default function LifecycleInboxResultsCard() {
   // Infinity scroll carousel logic
   const carouselRef = useRef<HTMLDivElement>(null);
-  // Duplicate slides for seamless loop
   const slides = [1, 2, 3, 4];
-  const allSlides = [...slides, ...slides];
+  const allSlides = [...slides, ...slides, ...slides]; // triple for smoothness
 
   useEffect(() => {
     const carousel = carouselRef.current;
     if (!carousel) return;
-    // On scroll, if at end, jump to start (after first set)
+    // Set initial scroll to the start of the second set
+    const slideWidth = carousel.scrollWidth / allSlides.length * slides.length;
+    carousel.scrollLeft = slideWidth;
+
     const handleScroll = () => {
-      if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
-        carousel.scrollLeft = 0;
-      } else if (carousel.scrollLeft === 0) {
-        // Optionally, jump to end if scrolling left
-        // carousel.scrollLeft = carousel.scrollWidth / 2;
+      const maxScroll = slideWidth * 2;
+      if (carousel.scrollLeft <= 0) {
+        // Jump to the same slide in the second set
+        carousel.scrollLeft = slideWidth;
+      } else if (carousel.scrollLeft >= maxScroll) {
+        // Jump back to the same slide in the second set
+        carousel.scrollLeft = slideWidth;
       }
     };
     carousel.addEventListener("scroll", handleScroll);
     return () => carousel.removeEventListener("scroll", handleScroll);
+    // eslint-disable-next-line
   }, []);
     <div className="bg-[#0a0806] px-6 py-16 text-white md:px-10 md:py-20">
       <div className="mx-auto max-w-[1400px]">
@@ -95,6 +100,7 @@ export default function LifecycleInboxResultsCard() {
                     width={400}
                     height={500}
                     className="rounded-2xl flex-shrink-0 w-[320px] h-auto sm:w-[400px]"
+                    draggable={false}
                   />
                 ))}
               </div>

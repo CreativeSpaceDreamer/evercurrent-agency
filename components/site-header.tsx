@@ -18,11 +18,26 @@ export function SiteHeader() {
           href="/#home"
           className="flex items-center h-full"
           aria-label="Lifecycle Inbox home"
-          style={{ lineHeight: 1, padding: 0, margin: 0, maxWidth: 'none' }}
+          style={{
+            lineHeight: 1,
+            padding: 0,
+            margin: 0,
+            maxWidth: 'none',
+            height: '100%',
+            minHeight: 0,
+            minWidth: 0,
+          }}
         >
           <span
             className="flex items-baseline whitespace-nowrap"
-            style={{ lineHeight: 1, padding: 0, margin: 0 }}
+            style={{
+              lineHeight: 1,
+              padding: 0,
+              margin: 0,
+              height: '100%',
+              minHeight: 0,
+              minWidth: 0,
+            }}
           >
             <span
               style={{
@@ -50,23 +65,23 @@ export function SiteHeader() {
                 color: '#111',
                 lineHeight: 1,
                 display: 'inline-block',
-                marginLeft: '0.12em',
+                marginLeft: '0.17em', // mobile default
                 margin: 0,
                 padding: 0,
                 transition: 'font-size 0.2s, margin-left 0.2s',
               }}
-              className="sm:text-[44px] sm:ml-[0.14em]"
+              className="sm:text-[44px] sm:ml-[0.2em]"
             >
               Inbox
             </span>
           </span>
         </Link>
-        <nav className="hidden items-center gap-4 md:flex" aria-label="Page sections">
+        <nav className="hidden items-center gap-3 md:flex" aria-label="Page sections">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-[11px] sm:text-xs font-semibold text-ink transition hover:text-accent"
+              className="text-[10px] sm:text-xs font-semibold text-ink transition hover:text-accent"
               style={{ letterSpacing: '0.01em' }}
             >
               {link.label}
@@ -75,7 +90,7 @@ export function SiteHeader() {
         </nav>
         <Link
           href="https://www.lifecycleinbox.com/contact#strategy-call"
-          className="btn-primary shrink-0 px-2 py-1.5 text-[10px] sm:px-5 sm:py-3 sm:text-xs"
+          className="btn-primary shrink-0 px-2 py-1.5 text-[9px] sm:px-4 sm:py-2.5 sm:text-xs"
         >
           <span className="sm:hidden">Book Call</span>
           <span className="hidden sm:inline">Book a Strategy Call</span>

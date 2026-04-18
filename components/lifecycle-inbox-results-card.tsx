@@ -43,6 +43,21 @@ export default function LifecycleInboxResultsCard() {
               height={900}
               className="block sm:hidden rounded-3xl w-full h-auto"
             />
+            {/* Third row: Desktop and Mobile images */}
+            <Image
+              src="/images/hero/resultsdesktop3.png"
+              alt="Results and testimonials 3"
+              width={1658}
+              height={768}
+              className="hidden sm:block rounded-3xl w-full h-auto"
+            />
+            <Image
+              src="/images/hero/resultsmobile3.png"
+              alt="Results and testimonials 3 (mobile)"
+              width={900}
+              height={900}
+              className="block sm:hidden rounded-3xl w-full h-auto"
+            />
           </div>
         </div>
       </div>

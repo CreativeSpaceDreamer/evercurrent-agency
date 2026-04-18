@@ -23,10 +23,10 @@ export default function LifecycleInboxResultsCard() {
   }, [allSlides.length, slides.length]);
 
   return (
-    <div className="bg-[#0a0806] px-6 py-16 text-white md:px-10 md:py-20">
+    <div className="bg-paper px-6 py-16 text-ink md:px-10 md:py-20">
       <div className="mx-auto max-w-[1400px]">
         <div className="mb-10 text-center">
-          <h2 className="text-3xl font-semibold uppercase tracking-[0.28em] text-white md:text-4xl">
+          <h2 className="text-3xl font-semibold uppercase tracking-[0.28em] text-ink md:text-4xl">
             Results & Testimonials
           </h2>
         </div>

@@ -221,7 +221,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div id="results" className="scroll-mt-28" />
       <section id="what-we-build" className="scroll-mt-28 bg-paper">
         <div className="section-shell pt-10 pb-14 sm:pt-12 sm:pb-16 md:pt-14 md:pb-20">
           <div className="mx-auto mb-8 max-w-3xl text-center sm:mb-9">

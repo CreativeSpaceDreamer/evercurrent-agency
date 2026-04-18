@@ -331,7 +331,7 @@ export default function HomePage() {
       </section>
 
 
-      <section id="results" className="scroll-mt-40">
+      <section id="results" className="scroll-mt-56">
         <LifecycleInboxResultsCard />
       </section>
 

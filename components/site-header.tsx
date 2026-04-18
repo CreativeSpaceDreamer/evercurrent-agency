@@ -13,14 +13,14 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 bg-paper/95 backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-2 px-4 py-2 sm:gap-3 sm:px-6 sm:py-4">
         <Link href="/#home" className="flex items-center gap-2 sm:gap-3" aria-label="Lifecycle Inbox home">
-          <span className="flex flex-col leading-none">
-            <span className="font-display text-[2.1rem] sm:text-4xl font-bold tracking-tight text-ink uppercase" style={{letterSpacing: '-0.03em'}}>
-              Lifecycle
-            </span>
-            <span className="font-sans text-[1.1rem] sm:text-lg font-medium tracking-widest text-accent mt-[-0.2em] ml-[0.08em]" style={{letterSpacing: '0.18em'}}>
-              Inbox
-            </span>
-          </span>
+          <Image
+            src="/lifecycle-inbox-logo.png"
+            alt="Lifecycle Inbox Logo"
+            width={180}
+            height={48}
+            priority
+            className="h-10 w-auto sm:h-12 object-contain"
+          />
         </Link>
         <nav className="hidden items-center gap-6 md:flex" aria-label="Page sections">
           {navLinks.map((link) => (

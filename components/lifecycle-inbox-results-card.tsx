@@ -90,7 +90,7 @@ export default function LifecycleInboxResultsCard() {
               </div>
               <div
                 ref={carouselRef}
-                className="flex gap-4 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-300 py-2"
+                className="flex gap-4 overflow-x-auto justify-center scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-300 py-2"
                 style={{ scrollBehavior: "smooth" }}
               >
                 {allSlides.map((n, i) => (
@@ -100,7 +100,7 @@ export default function LifecycleInboxResultsCard() {
                     alt={`Testimonial card ${n}`}
                     width={400}
                     height={500}
-                    className="rounded-2xl flex-shrink-0 w-[320px] h-auto sm:w-[400px]"
+                    className="rounded-2xl flex-shrink-0 w-[320px] max-w-lg h-auto sm:w-[400px] mx-auto"
                     draggable={false}
                   />
                 ))}

@@ -33,12 +33,7 @@ export default function LifecycleInboxResultsCard() {
         <div className="mb-10 text-center">
           <h2 className="text-3xl font-semibold uppercase tracking-[0.28em] text-white md:text-4xl">
             Results & Testimonials
-          </h2>
-        </div>
-        <div className="flex justify-center">
-          <div className="w-full px-4 lg:px-[325px] flex flex-col gap-8">
-            {/* First row: Desktop and Mobile images */}
-            <Image
+          </div>
               src="/images/hero/trueresults.png"
               alt="Results and testimonials"
               width={1658}

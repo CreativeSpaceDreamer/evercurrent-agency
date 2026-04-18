@@ -16,10 +16,10 @@ export function SiteHeader() {
           <Image
             src="/lifecycle-inbox-logo.png"
             alt="Lifecycle Inbox Logo"
-            width={180}
-            height={48}
+            width={360}
+            height={96}
             priority
-            className="h-10 w-auto sm:h-12 object-contain"
+            className="h-16 w-auto sm:h-24 object-contain"
           />
         </Link>
         <nav className="hidden items-center gap-6 md:flex" aria-label="Page sections">

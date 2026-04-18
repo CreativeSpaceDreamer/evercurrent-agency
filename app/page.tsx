@@ -331,11 +331,9 @@ export default function HomePage() {
       </section>
 
 
-      <div className="scroll-mt-40">
-        <section id="results">
-          <LifecycleInboxResultsCard />
-        </section>
-      </div>
+      <section id="results" className="scroll-mt-40">
+        <LifecycleInboxResultsCard />
+      </section>
 
       <section className="bg-bone/48">
         <div className="section-shell pt-10 pb-14 sm:pt-12 sm:pb-16 md:pt-14 md:pb-20">

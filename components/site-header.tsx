@@ -12,24 +12,54 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 bg-paper/95 backdrop-blur">
       <div
-        className="mx-auto flex w-full max-w-6xl items-center justify-between gap-2 px-2 sm:px-6"
-        style={{ minHeight: '72px', height: '88px', maxHeight: '88px' }}
+        className="mx-auto flex w-full max-w-6xl items-center justify-between gap-2 px-2 sm:px-6 h-[64px] sm:h-[80px] lg:h-[88px]"
       >
         <Link
           href="/#home"
-          className="flex items-center"
+          className="flex items-center h-full"
           aria-label="Lifecycle Inbox home"
-          style={{ minWidth: '220px', flexShrink: 0 }}
+          style={{ lineHeight: 1, padding: 0, margin: 0, maxWidth: 'none' }}
         >
-          <Image
-            src="/lifecycle-inbox-logo.png"
-            alt="Lifecycle Inbox Logo"
-            width={600}
-            height={132}
-            priority
-            className="object-contain select-none h-[28px] sm:h-[36px] lg:h-[44px] w-auto"
-            style={{ lineHeight: 1, display: 'block' }}
-          />
+          <span
+            className="flex items-baseline whitespace-nowrap"
+            style={{ lineHeight: 1, padding: 0, margin: 0 }}
+          >
+            <span
+              style={{
+                fontFamily: 'Georgia,\'Times New Roman\',serif',
+                fontWeight: 700,
+                fontSize: '32px',
+                letterSpacing: '-0.055em',
+                color: '#111',
+                lineHeight: 1,
+                display: 'inline-block',
+                margin: 0,
+                padding: 0,
+                transition: 'font-size 0.2s',
+              }}
+              className="sm:text-[52px]"
+            >
+              Lifecycle
+            </span>
+            <span
+              style={{
+                fontFamily: 'Inter,system-ui,sans-serif',
+                fontWeight: 300,
+                fontSize: '27px',
+                letterSpacing: '-0.06em',
+                color: '#111',
+                lineHeight: 1,
+                display: 'inline-block',
+                marginLeft: '0.12em',
+                margin: 0,
+                padding: 0,
+                transition: 'font-size 0.2s, margin-left 0.2s',
+              }}
+              className="sm:text-[44px] sm:ml-[0.14em]"
+            >
+              Inbox
+            </span>
+          </span>
         </Link>
         <nav className="hidden items-center gap-4 md:flex" aria-label="Page sections">
           {navLinks.map((link) => (

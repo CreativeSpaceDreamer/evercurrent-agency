@@ -1,7 +1,28 @@
 import Image from "next/image"; // trigger redeploy (testimonial image refresh)
+import { useRef, useEffect } from "react";
 
 export default function LifecycleInboxResultsCard() {
-  return (
+  // Infinity scroll carousel logic
+  const carouselRef = useRef<HTMLDivElement>(null);
+  // Duplicate slides for seamless loop
+  const slides = [1, 2, 3, 4];
+  const allSlides = [...slides, ...slides];
+
+  useEffect(() => {
+    const carousel = carouselRef.current;
+    if (!carousel) return;
+    // On scroll, if at end, jump to start (after first set)
+    const handleScroll = () => {
+      if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
+        carousel.scrollLeft = 0;
+      } else if (carousel.scrollLeft === 0) {
+        // Optionally, jump to end if scrolling left
+        // carousel.scrollLeft = carousel.scrollWidth / 2;
+      }
+    };
+    carousel.addEventListener("scroll", handleScroll);
+    return () => carousel.removeEventListener("scroll", handleScroll);
+  }, []);
     <div className="bg-[#0a0806] px-6 py-16 text-white md:px-10 md:py-20">
       <div className="mx-auto max-w-[1400px]">
         <div className="mb-10 text-center">
@@ -59,12 +80,16 @@ export default function LifecycleInboxResultsCard() {
               className="block sm:hidden rounded-3xl w-full h-auto"
             />
 
-            {/* Testimonial carousel */}
+            {/* Testimonial carousel (infinity scroll) */}
             <div className="w-full mt-4">
-              <div className="flex gap-4 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-300 py-2">
-                {[1,2,3,4].map((n) => (
+              <div
+                ref={carouselRef}
+                className="flex gap-4 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-300 py-2"
+                style={{ scrollBehavior: "smooth" }}
+              >
+                {allSlides.map((n, i) => (
                   <Image
-                    key={n}
+                    key={i}
                     src={`/images/hero/testimonialhero${n}.png`}
                     alt={`Testimonial card ${n}`}
                     width={400}

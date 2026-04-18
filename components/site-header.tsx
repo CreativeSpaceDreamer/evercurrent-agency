@@ -16,16 +16,13 @@ export function SiteHeader() {
       >
         <Link
           href="/#home"
-          className="flex items-center h-full"
+          className="flex items-center"
           aria-label="Lifecycle Inbox home"
           style={{
             lineHeight: 1,
             padding: 0,
             margin: 0,
             maxWidth: 'none',
-            height: '100%',
-            minHeight: 0,
-            minWidth: 0,
           }}
         >
           <span
@@ -34,9 +31,6 @@ export function SiteHeader() {
               lineHeight: 1,
               padding: 0,
               margin: 0,
-              height: '100%',
-              minHeight: 0,
-              minWidth: 0,
             }}
           >
             <span

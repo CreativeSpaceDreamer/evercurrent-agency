@@ -27,37 +27,17 @@ export function SiteHeader() {
             width={400}
             height={88}
             priority
-            className="object-contain select-none"
-            style={{
-              height: '28px',
-              maxHeight: '44px',
-              width: 'auto',
-              lineHeight: 1,
-              display: 'block',
-            }}
+            className="object-contain select-none h-[28px] sm:h-[36px] lg:h-[44px] w-auto"
+            style={{ lineHeight: 1, display: 'block' }}
             sizes="(max-width: 639px) 120px, (max-width: 1023px) 180px, 320px"
           />
-          <style jsx global>{`
-            @media (min-width: 640px) {
-              .lifecycle-logo {
-                height: 36px !important;
-                max-height: 36px !important;
-              }
-            }
-            @media (min-width: 1024px) {
-              .lifecycle-logo {
-                height: 44px !important;
-                max-height: 44px !important;
-              }
-            }
-          `}</style>
         </Link>
-        <nav className="hidden items-center gap-5 md:flex" aria-label="Page sections">
+        <nav className="hidden items-center gap-4 md:flex" aria-label="Page sections">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-xs sm:text-sm font-semibold text-ink transition hover:text-accent"
+              className="text-[11px] sm:text-xs font-semibold text-ink transition hover:text-accent"
               style={{ letterSpacing: '0.01em' }}
             >
               {link.label}

@@ -1,4 +1,4 @@
-import Image from "next/image"; // trigger redeploy
+import Image from "next/image"; // trigger redeploy (testimonial image refresh)
 
 export default function LifecycleInboxResultsCard() {
   return (

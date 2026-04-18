@@ -58,6 +58,22 @@ export default function LifecycleInboxResultsCard() {
               height={900}
               className="block sm:hidden rounded-3xl w-full h-auto"
             />
+
+            {/* Testimonial carousel */}
+            <div className="w-full mt-4">
+              <div className="flex gap-4 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-300 py-2">
+                {[1,2,3,4].map((n) => (
+                  <Image
+                    key={n}
+                    src={`/images/hero/testimonialhero${n}.png`}
+                    alt={`Testimonial card ${n}`}
+                    width={400}
+                    height={500}
+                    className="rounded-2xl flex-shrink-0 w-[320px] h-auto sm:w-[400px]"
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

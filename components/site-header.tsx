@@ -13,23 +13,22 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 bg-paper/95 backdrop-blur">
       <div
         className="mx-auto flex w-full max-w-6xl items-center justify-between gap-2 px-2 sm:px-6"
-        style={{ minHeight: '64px', height: '72px', maxHeight: '88px' }}
+        style={{ minHeight: '72px', height: '88px', maxHeight: '88px' }}
       >
         <Link
           href="/#home"
           className="flex items-center"
           aria-label="Lifecycle Inbox home"
-          style={{ minWidth: '180px', flexShrink: 0 }}
+          style={{ minWidth: '220px', flexShrink: 0 }}
         >
           <Image
             src="/lifecycle-inbox-logo.png"
             alt="Lifecycle Inbox Logo"
-            width={400}
-            height={88}
+            width={600}
+            height={132}
             priority
             className="object-contain select-none h-[28px] sm:h-[36px] lg:h-[44px] w-auto"
             style={{ lineHeight: 1, display: 'block' }}
-            sizes="(max-width: 639px) 120px, (max-width: 1023px) 180px, 320px"
           />
         </Link>
         <nav className="hidden items-center gap-4 md:flex" aria-label="Page sections">

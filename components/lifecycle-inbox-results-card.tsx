@@ -1,3 +1,5 @@
+import { useRef, useEffect } from 'react';
+
 export default function LifecycleInboxResultsCard() {
   const carouselRef = useRef<HTMLDivElement>(null);
   const slides = [1, 2, 3, 4];

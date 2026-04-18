@@ -44,9 +44,9 @@ export function SiteHeader() {
                 display: 'inline-block',
                 margin: 0,
                 padding: 0,
-                transition: 'font-size 0.2s',
+                transition: 'font-size 0.2s, margin-right 0.2s',
               }}
-              className="sm:text-[52px]"
+              className="sm:text-[52px] mr-[0.17em] sm:mr-[0.35em]"
             >
               Lifecycle
             </span>
@@ -61,9 +61,9 @@ export function SiteHeader() {
                 display: 'inline-block',
                 margin: 0,
                 padding: 0,
-                transition: 'font-size 0.2s, margin-left 0.2s',
+                transition: 'font-size 0.2s',
               }}
-              className="ml-[0.17em] sm:text-[44px] sm:ml-[0.35em]"
+              className="sm:text-[44px]"
             >
               Inbox
             </span>

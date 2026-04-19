@@ -83,7 +83,7 @@ export function SiteHeader() {
         </nav>
         <Link
           href="https://www.lifecycleinbox.com/contact#strategy-call"
-          className="btn-primary shrink-0 px-2 py-1.5 text-[9px] sm:px-4 sm:py-2.5 sm:text-xs"
+          className="btn-primary shrink-0 px-2 py-1.5 text-sm sm:px-4 sm:py-2.5 sm:text-xs"
         >
           <span className="sm:hidden">Book Call</span>
           <span className="hidden sm:inline">Book a Strategy Call</span>

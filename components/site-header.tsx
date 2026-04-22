@@ -16,58 +16,17 @@ export function SiteHeader() {
       >
         <Link
           href="/#home"
-          className="flex items-center"
+          className="flex items-center h-full"
           aria-label="Lifecycle Inbox home"
-          style={{
-            lineHeight: 1,
-            padding: 0,
-            margin: 0,
-            maxWidth: 'none',
-          }}
         >
-          <span
-            className="flex items-baseline whitespace-nowrap"
-            style={{
-              lineHeight: 1,
-              padding: 0,
-              margin: 0,
-            }}
-          >
-            <span
-              style={{
-                fontFamily: 'Georgia,\'Times New Roman\',serif',
-                fontWeight: 700,
-                fontSize: '32px',
-                letterSpacing: '-0.055em',
-                color: '#111',
-                lineHeight: 1,
-                display: 'inline-block',
-                margin: 0,
-                padding: 0,
-                transition: 'font-size 0.2s, margin-right 0.2s',
-              }}
-              className="sm:text-[52px] mr-[0.17em] sm:mr-[0.35em]"
-            >
-              Lifecycle
-            </span>
-            <span
-              style={{
-                fontFamily: 'Inter,system-ui,sans-serif',
-                fontWeight: 300,
-                fontSize: '27px',
-                letterSpacing: '-0.06em',
-                color: '#111',
-                lineHeight: 1,
-                display: 'inline-block',
-                margin: 0,
-                padding: 0,
-                transition: 'font-size 0.2s',
-              }}
-              className="sm:text-[44px]"
-            >
-              Inbox
-            </span>
-          </span>
+          <img
+            src="/lifecycle-inbox-logo.png"
+            alt="Lifecycle Inbox logo"
+            className="h-[32px] sm:h-[52px] w-auto max-w-[320px] sm:max-w-[480px] object-contain"
+            style={{display: 'block'}}
+            loading="eager"
+            decoding="async"
+          />
         </Link>
         <nav className="hidden items-center gap-3 md:flex" aria-label="Page sections">
           {navLinks.map((link) => (

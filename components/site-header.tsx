@@ -20,7 +20,7 @@ export function SiteHeader() {
           aria-label="Lifecycle Inbox home"
         >
           <img
-            src="/lifecycle-inbox-logo.png"
+            src="/lifecycleinboxlogo.png"
             alt="Lifecycle Inbox logo"
             className="h-[32px] sm:h-[52px] w-auto max-w-[320px] sm:max-w-[480px] object-contain"
             style={{display: 'block'}}

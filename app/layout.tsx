@@ -81,7 +81,8 @@ export default function RootLayout({
         <SiteFooter />
         <AnalyticsScripts />
         {/* Google Analytics 4 SPA pageview tracking */}
-        {typeof window !== 'undefined' && <>(require('@/components/google-analytics').GoogleAnalytics())</>}
+        {/* @ts-expect-error Async Server Component to Client Component boundary */}
+        {require('@/components/google-analytics-wrapper').default()}
       </body>
     </html>
   );

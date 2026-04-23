@@ -17,6 +17,7 @@ const timeline = [
   "Weeks 5–8: Launch, test, and refine"
 ];
 
+export default function EmailServicePage() {
   return (
     <Suspense>
       <div className="bg-slate">
@@ -81,4 +82,5 @@ const timeline = [
       </div>
     </Suspense>
   );
+}
 

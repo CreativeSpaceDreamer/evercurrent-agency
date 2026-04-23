@@ -61,11 +61,27 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={montserrat.variable} suppressHydrationWarning>
+      <head>
+        {/* Google Analytics 4 Global Site Tag */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5357V8MKYZ"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-5357V8MKYZ', { page_path: window.location.pathname });
+            `,
+          }}
+        />
+      </head>
       <body className="bg-paper text-ink antialiased">
         <SiteHeader />
         <main className="min-h-[calc(100vh-18rem)]">{children}</main>
         <SiteFooter />
         <AnalyticsScripts />
+        {/* Google Analytics 4 SPA pageview tracking */}
+        {typeof window !== 'undefined' && <>(require('@/components/google-analytics').GoogleAnalytics())</>}
       </body>
     </html>
   );

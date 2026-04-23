@@ -4,6 +4,7 @@ import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { AnalyticsScripts } from "@/components/analytics";
+import GoogleAnalyticsWrapper from "@/components/google-analytics-wrapper";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -81,8 +82,7 @@ export default function RootLayout({
         <SiteFooter />
         <AnalyticsScripts />
         {/* Google Analytics 4 SPA pageview tracking */}
-        {/* @ts-expect-error Async Server Component to Client Component boundary */}
-        {require('@/components/google-analytics-wrapper').default()}
+        <GoogleAnalyticsWrapper />
       </body>
     </html>
   );

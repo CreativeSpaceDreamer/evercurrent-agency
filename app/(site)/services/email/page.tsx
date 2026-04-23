@@ -81,5 +81,4 @@ const timeline = [
       </div>
     </Suspense>
   );
-}
 

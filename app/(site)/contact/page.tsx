@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "Book a strategy call with Lifecycle Inbox to review your lifecycle gaps, priorities, and recommended next steps."
 };
 
+export default function ContactPage() {
   return (
     <Suspense>
       <div className="bg-paper">

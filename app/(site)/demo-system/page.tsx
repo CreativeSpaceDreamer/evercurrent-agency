@@ -94,6 +94,7 @@ const showcaseSupporting = [
   }
 ];
 
+export default function DemoSystemPage() {
   return (
     <Suspense>
       <div className="bg-paper">

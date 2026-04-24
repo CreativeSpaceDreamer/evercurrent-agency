@@ -20,11 +20,6 @@ const patterns = [
 
 export default function EmailDesignsPage() {
   return (
-    <div className="bg-slate">
-      <section className="bg-paper">
-        <div className="mx-auto w-full max-w-5xl px-6 py-20">
-export default function EmailDesignsPage() {
-  return (
     <Suspense>
       <div className="bg-slate">
         <section className="bg-paper">
@@ -64,9 +59,6 @@ export default function EmailDesignsPage() {
         </section>
       </div>
     </Suspense>
-  );
-      </section>
-    </div>
   );
 }
 

@@ -35,6 +35,7 @@ const operatingBeliefs = [
   "Retention performance improves when strategy and execution stay in the same room."
 ];
 
+export default function AboutPage() {
   return (
     <Suspense>
       <div className="bg-paper">

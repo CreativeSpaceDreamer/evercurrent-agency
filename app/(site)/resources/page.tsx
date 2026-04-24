@@ -17,6 +17,7 @@ const resources = [
   }
 ];
 
+export default function ResourcesPage() {
   return (
     <Suspense>
       <div className="bg-slate">

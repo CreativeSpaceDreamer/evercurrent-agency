@@ -9,6 +9,7 @@ const capabilities = [
   "Reporting on engagement and conversion"
 ];
 
+export default function PushServicePage() {
   return (
     <Suspense>
       <div className="bg-slate">

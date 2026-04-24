@@ -9,6 +9,7 @@ const focusAreas = [
   "Reporting that ties paid to lifecycle metrics"
 ];
 
+export default function PaidServicePage() {
   return (
     <Suspense>
       <div className="bg-slate">

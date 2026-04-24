@@ -1,23 +1,21 @@
 "use client";
-import { Suspense } from "react";
 export default function PrivacyPage() {
   return (
-    <Suspense>
-      <div className="bg-slate">
-        <section className="bg-paper">
-          <div className="mx-auto w-full max-w-4xl px-6 py-20">
-            <p className="section-eyebrow">Legal</p>
-            <h1 className="mt-4 text-4xl font-semibold text-ink">Privacy Policy</h1>
-            <p className="mt-6 text-sm text-ink-2">
-              Updated: {new Date().getFullYear()}.
-            </p>
-            <div className="mt-8 space-y-6 text-sm leading-7 text-ink">
-              <section>
-                <h2 className="text-lg font-semibold text-ink">1. Overview</h2>
-                <p className="mt-2">
-                  lifecycleinbox.com (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) provides lifecycle marketing services. This policy explains how we collect, use, and safeguard personal information when you visit our website or engage our services.
-                </p>
-              </section>
+    <div className="bg-slate">
+      <section className="bg-paper">
+        <div className="mx-auto w-full max-w-4xl px-6 py-20">
+          <p className="section-eyebrow">Legal</p>
+          <h1 className="mt-4 text-4xl font-semibold text-ink">Privacy Policy</h1>
+          <p className="mt-6 text-sm text-ink-2">
+            Updated: {new Date().getFullYear()}.
+          </p>
+          <div className="mt-8 space-y-6 text-sm leading-7 text-ink">
+            <section>
+              <h2 className="text-lg font-semibold text-ink">1. Overview</h2>
+              <p className="mt-2">
+                lifecycleinbox.com (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) provides lifecycle marketing services. This policy explains how we collect, use, and safeguard personal information when you visit our website or engage our services.
+              </p>
+            </section>
             <section>
               <h2 className="text-lg font-semibold text-ink">2. Data we collect</h2>
               <ul className="mt-2 list-disc space-y-2 pl-5">

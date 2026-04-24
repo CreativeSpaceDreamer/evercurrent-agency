@@ -23,6 +23,7 @@ const guides = [
   }
 ];
 
+export default function GuidesPage() {
   return (
     <Suspense>
       <div className="bg-slate">

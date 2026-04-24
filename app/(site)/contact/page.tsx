@@ -1,14 +1,7 @@
 
 "use client";
 import { Suspense } from "react";
-import type { Metadata } from "next";
 import { StrategyCallForm } from "@/components/strategy-call-form";
-
-export const metadata: Metadata = {
-  title: "Book a Strategy Call",
-  description:
-    "Book a strategy call with Lifecycle Inbox to review your lifecycle gaps, priorities, and recommended next steps."
-};
 
 export default function ContactPage() {
   return (

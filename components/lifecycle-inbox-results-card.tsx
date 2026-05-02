@@ -37,7 +37,7 @@ export default function LifecycleInboxResultsCard() {
           <div className="w-full px-4 lg:px-[325px] flex flex-col gap-8">
             {/* Case Study 1 */}
             <Image
-              src="/images/hero/case1-desktop.png"
+              src="/images/hero/result1.png"
               alt="Case Study 1 Results (desktop)"
               width={1658}
               height={768}
@@ -45,7 +45,7 @@ export default function LifecycleInboxResultsCard() {
               priority
             />
             <Image
-              src="/images/hero/case1-mobile.png"
+              src="/images/hero/result1-mobile.png"
               alt="Case Study 1 Results (mobile)"
               width={900}
               height={900}
@@ -54,14 +54,14 @@ export default function LifecycleInboxResultsCard() {
             />
             {/* Case Study 2 */}
             <Image
-              src="/images/hero/case2-desktop.png"
+              src="/images/hero/result2.png"
               alt="Case Study 2 Results (desktop)"
               width={1658}
               height={768}
               className="hidden sm:block rounded-3xl w-full h-auto"
             />
             <Image
-              src="/images/hero/case2-mobile.png"
+              src="/images/hero/result2-mobile.png"
               alt="Case Study 2 Results (mobile)"
               width={900}
               height={900}
@@ -69,14 +69,14 @@ export default function LifecycleInboxResultsCard() {
             />
             {/* Case Study 3 */}
             <Image
-              src="/images/hero/case3-desktop.png"
+              src="/images/hero/result3.png"
               alt="Case Study 3 Results (desktop)"
               width={1658}
               height={768}
               className="hidden sm:block rounded-3xl w-full h-auto"
             />
             <Image
-              src="/images/hero/case3-mobile.png"
+              src="/images/hero/result3-mobile.png"
               alt="Case Study 3 Results (mobile)"
               width={900}
               height={900}
@@ -84,14 +84,14 @@ export default function LifecycleInboxResultsCard() {
             />
             {/* Case Study 4 */}
             <Image
-              src="/images/hero/case4-desktop.png"
+              src="/images/hero/result4.png"
               alt="Case Study 4 Results (desktop)"
               width={1658}
               height={768}
               className="hidden sm:block rounded-3xl w-full h-auto"
             />
             <Image
-              src="/images/hero/case4-mobile.png"
+              src="/images/hero/result4-mobile.png"
               alt="Case Study 4 Results (mobile)"
               width={900}
               height={900}

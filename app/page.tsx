@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import LifecycleInboxResultsCard from "@/components/lifecycle-inbox-results-card";
@@ -166,7 +167,8 @@ const faqItems = [
 
 export default function HomePage() {
   return (
-    <div className="bg-paper">
+    <Suspense fallback={null}>
+      <div className="bg-paper">
       <section
         id="home"
         className="scroll-mt-28 flex min-h-[calc(100svh-3.5rem)] flex-col bg-paper sm:min-h-0"
@@ -422,7 +424,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </Suspense>
   );
 }
 

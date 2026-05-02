@@ -1,3 +1,4 @@
+
 "use client";
 import { Suspense } from "react";
 import Link from "next/link";
@@ -5,25 +6,25 @@ import Link from "next/link";
 const pillars = [
   {
     title: "Consent + compliance",
-    detail: "Opt‑in journeys, preference management, and policy alignment."
+    detail: "Optin journeys, preference management, and policy alignment."
   },
   {
     title: "Lifecycle triggers",
-    detail: "Welcome, abandon, post‑purchase, win‑back, and VIP moments."
+    detail: "Welcome, abandon, postpurchase, winback, and VIP moments."
   },
   {
-    title: "Two‑way support",
+    title: "Twoway support",
     detail: "Concierge flows, routing rules, and escalation paths."
   }
 ];
 
 export default function SmsServicePage() {
   return (
-    <Suspense>
+    <Suspense fallback={null}>
       <div className="bg-slate">
         <section className="bg-paper">
           <div className="mx-auto w-full max-w-6xl px-6 py-20">
-            <p className="section-eyebrow">Services · SMS Programs</p>
+            <p className="section-eyebrow">Services ￻b7 SMS Programs</p>
             <h1 className="mt-4 text-5xl font-semibold text-ink md:text-6xl">SMS built for trust and timing.</h1>
             <p className="mt-6 max-w-2xl text-lg text-ink-2">
               We integrate SMS into your lifecycle so messages feel helpful, not intrusive.
@@ -36,20 +37,16 @@ export default function SmsServicePage() {
                 Book a strategy call
               </Link>
             </div>
+            <div className="grid gap-6 md:grid-cols-3 mt-8">
+              {pillars.map((pillar) => (
+                <article key={pillar.title} className="card">
+                  <h2 className="text-2xl font-semibold text-ink">{pillar.title}</h2>
+                  <p className="mt-4 text-sm text-ink-2">{pillar.detail}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
-
-        <section className="mx-auto w-full max-w-6xl px-6 py-20">
-          <div className="grid gap-6 md:grid-cols-3">
-            {pillars.map((pillar) => (
-              <article key={pillar.title} className="card">
-                <h2 className="text-2xl font-semibold text-ink">{pillar.title}</h2>
-                <p className="mt-4 text-sm text-ink-2">{pillar.detail}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
         <section className="bg-slate text-ink">
           <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20 md:flex-row md:items-center md:justify-between">
             <div className="max-w-xl">

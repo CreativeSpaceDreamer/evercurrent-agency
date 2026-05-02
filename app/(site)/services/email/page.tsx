@@ -1,3 +1,5 @@
+
+
 "use client";
 import { Suspense } from "react";
 import Link from "next/link";
@@ -13,17 +15,17 @@ const deliverables = [
 const timeline = [
   "Week 1: Access, baseline, lifecycle map",
   "Week 2: Roadmap + flow priorities",
-  "Weeks 3–4: Build + quality checks on core flows",
-  "Weeks 5–8: Launch, test, and refine"
+  "Weeks 34: Build + quality checks on core flows",
+  "Weeks 58: Launch, test, and refine"
 ];
 
 export default function EmailServicePage() {
   return (
-    <Suspense>
+    <Suspense fallback={null}>
       <div className="bg-slate">
         <section className="bg-paper">
           <div className="mx-auto w-full max-w-6xl px-6 py-20">
-            <p className="section-eyebrow">Services · Email Lifecycle</p>
+            <p className="section-eyebrow">Services \u0000b7 Email Lifecycle</p>
             <h1 className="mt-4 text-5xl font-semibold text-ink md:text-6xl">Email lifecycle built for repeat revenue.</h1>
             <p className="mt-6 max-w-2xl text-lg text-ink-2">
               We design and optimize email programs that support retention outcomes—typically as part of a Sprint or Retainer.
@@ -41,46 +43,46 @@ export default function EmailServicePage() {
 
         <section className="mx-auto w-full max-w-6xl px-6 py-20">
           <div className="grid gap-6 md:grid-cols-[2fr,3fr]">
-            <article className="card">
-              <h2 className="text-3xl font-semibold text-ink">What we deliver</h2>
-              <ul className="mt-6 space-y-3 text-sm text-ink">
-                {deliverables.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <span className="mt-1 h-2 w-2 flex-none rounded-full bg-accent" aria-hidden="true" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
-            <article className="card">
-              <h2 className="text-3xl font-semibold text-ink">Sample timeline</h2>
-              <ol className="mt-6 space-y-4 text-sm text-ink">
-                {timeline.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <span className="mt-1 h-2 w-2 flex-none rounded-full bg-accent" aria-hidden="true" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ol>
-            </article>
-          </div>
-        </section>
+          <article className="card">
+            <h2 className="text-3xl font-semibold text-ink">What we deliver</h2>
+            <ul className="mt-6 space-y-3 text-sm text-ink">
+              {deliverables.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span className="mt-1 h-2 w-2 flex-none rounded-full bg-accent" aria-hidden="true" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
+          <article className="card">
+            <h2 className="text-3xl font-semibold text-ink">Sample timeline</h2>
+            <ol className="mt-6 space-y-4 text-sm text-ink">
+              {timeline.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span className="mt-1 h-2 w-2 flex-none rounded-full bg-accent" aria-hidden="true" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ol>
+          </article>
+        </div>
+      </section>
 
-        <section className="bg-slate text-ink">
-          <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20 md:flex-row md:items-center md:justify-between">
-            <div className="max-w-xl">
-              <h2 className="text-3xl font-semibold md:text-4xl">Ready to strengthen email lifecycle?</h2>
-              <p className="mt-4 text-base text-ink-2">
-                Book a strategy call and we’ll map your highest-impact opportunities.
-              </p>
-            </div>
-            <Link href="/contact" className="btn-primary">
-              Work with us
-            </Link>
+      <section className="bg-slate text-ink">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-20 md:flex-row md:items-center md:justify-between">
+          <div className="max-w-xl">
+            <h2 className="text-3xl font-semibold md:text-4xl">Ready to strengthen email lifecycle?</h2>
+            <p className="mt-4 text-base text-ink-2">
+              Book a strategy call and we’ll map your highest-impact opportunities.
+            </p>
           </div>
-        </section>
+          <Link href="/contact" className="btn-primary">
+            Work with us
+          </Link>
+        </div>
+      </section>
       </div>
-    </Suspense>
-  );
-}
+      </Suspense>
+    );
+  }
 

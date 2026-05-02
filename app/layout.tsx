@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { AnalyticsScripts } from "@/components/analytics";
 import GoogleAnalyticsWrapper from "@/components/google-analytics-wrapper";
+import { Suspense } from "react";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -75,6 +76,19 @@ export default function RootLayout({
             `,
           }}
         />
+        {/* Microsoft Clarity Tracking */}
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "wgxpqgabnb");
+            `,
+          }}
+        />
       </head>
       <body className="bg-paper text-ink antialiased">
         <SiteHeader />
@@ -82,7 +96,9 @@ export default function RootLayout({
         <SiteFooter />
         <AnalyticsScripts />
         {/* Google Analytics 4 SPA pageview tracking */}
-        <GoogleAnalyticsWrapper />
+        <Suspense fallback={null}>
+          <GoogleAnalyticsWrapper />
+        </Suspense>
       </body>
     </html>
   );

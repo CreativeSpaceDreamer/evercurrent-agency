@@ -1,8 +1,11 @@
 "use client";
+import { Suspense } from "react";
+
 export default function PrivacyPage() {
   return (
-    <div className="bg-slate">
-      <section className="bg-paper">
+    <Suspense fallback={null}>
+      <div className="bg-slate">
+        <section className="bg-paper">
         <div className="mx-auto w-full max-w-4xl px-6 py-20">
           <p className="section-eyebrow">Legal</p>
           <h1 className="mt-4 text-4xl font-semibold text-ink">Privacy Policy</h1>
@@ -65,7 +68,8 @@ export default function PrivacyPage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </Suspense>
   );
 }
 

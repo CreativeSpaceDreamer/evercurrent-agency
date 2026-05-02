@@ -3,7 +3,7 @@ import { Suspense } from "react";
 
 export default function TermsPage() {
   return (
-    <Suspense>
+    <Suspense fallback={null}>
       <div className="bg-slate">
         <section className="bg-paper">
           <div className="mx-auto w-full max-w-4xl px-6 py-20">

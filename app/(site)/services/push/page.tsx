@@ -1,9 +1,11 @@
+
+
 "use client";
 import { Suspense } from "react";
 import Link from "next/link";
 
 const capabilities = [
-  "Behavior‑based triggers for timely nudges",
+  "Behaviorbased triggers for timely nudges",
   "Preference management and consent controls",
   "Message sequencing aligned with email + SMS",
   "Reporting on engagement and conversion"
@@ -11,14 +13,14 @@ const capabilities = [
 
 export default function PushServicePage() {
   return (
-    <Suspense>
+    <Suspense fallback={null}>
       <div className="bg-slate">
         <section className="bg-paper">
           <div className="mx-auto w-full max-w-6xl px-6 py-20">
-            <p className="section-eyebrow">Services · Push</p>
+            <p className="section-eyebrow">Services \u0000b7 Push</p>
             <h1 className="mt-4 text-5xl font-semibold text-ink md:text-6xl">Push as a lifecycle extension.</h1>
             <p className="mt-6 max-w-2xl text-lg text-ink-2">
-              Push and in‑app can support key lifecycle moments once email + SMS foundations are in place.
+              Push and in-app can support key lifecycle moments once email + SMS foundations are in place.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link href="/contact" className="btn-primary text-base">
@@ -58,8 +60,8 @@ export default function PushServicePage() {
             </Link>
           </div>
         </section>
-      </div>
-    </Suspense>
-  );
-}
+        </div>
+      </Suspense>
+    );
+  }
 

@@ -1,24 +1,26 @@
+
+
 "use client";
 import { Suspense } from "react";
 import Link from "next/link";
 
 const focusAreas = [
   "Lifecycle audiences for retargeting",
-  "Win‑back and lapsed‑buyer sequencing",
+  "Winback and lapsedbuyer sequencing",
   "Offer alignment across email, SMS, and paid",
   "Reporting that ties paid to lifecycle metrics"
 ];
 
 export default function PaidServicePage() {
   return (
-    <Suspense>
+    <Suspense fallback={null}>
       <div className="bg-slate">
         <section className="bg-paper">
           <div className="mx-auto w-full max-w-6xl px-6 py-20">
-            <p className="section-eyebrow">Services · Paid Retention</p>
+            <p className="section-eyebrow">Services \u0000b7 Paid Retention</p>
             <h1 className="mt-4 text-5xl font-semibold text-ink md:text-6xl">Paid that supports lifecycle, not replaces it.</h1>
             <p className="mt-6 max-w-2xl text-lg text-ink-2">
-              Paid retention is considered only when it supports a strong owned‑channel foundation.
+              Paid retention is considered only when it supports a strong owned-channel foundation.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link href="/contact" className="btn-primary text-base">
@@ -58,8 +60,8 @@ export default function PaidServicePage() {
             </Link>
           </div>
         </section>
-      </div>
-    </Suspense>
-  );
-}
+        </div>
+      </Suspense>
+    );
+  }
 

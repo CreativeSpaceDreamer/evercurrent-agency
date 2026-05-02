@@ -35,53 +35,68 @@ export default function LifecycleInboxResultsCard() {
         </div>
         <div className="flex justify-center">
           <div className="w-full px-4 lg:px-[325px] flex flex-col gap-8">
-            {/* First row: Desktop and Mobile images */}
-                        <Image
-                          src="/images/hero/trueresults.png"
-                          alt="Results and testimonials"
-                          width={1658}
-                          height={768}
-                          className="hidden sm:block rounded-3xl w-full h-auto"
-                          priority
-                        />
-                        <Image
-                          src="/images/hero/resultsmobile.png"
-                          alt="Results and testimonials (mobile)"
-                          width={900}
-                          height={900}
-                          className="block sm:hidden rounded-3xl w-full h-auto"
-                          priority
-                        />
-                        {/* Second row: Desktop and Mobile images */}
-                        <Image
-                          src="/images/hero/resultsdesktop2.png"
-                          alt="Results and testimonials 2"
-                          width={1658}
-                          height={768}
-                          className="hidden sm:block rounded-3xl w-full h-auto"
-                        />
-                        <Image
-                          src="/images/hero/resultsmobile2.png"
-                          alt="Results and testimonials 2 (mobile)"
-                          width={900}
-                          height={900}
-                          className="block sm:hidden rounded-3xl w-full h-auto"
-                        />
-                        {/* Third row: Desktop and Mobile images */}
-                        <Image
-                          src="/images/hero/resultsdesktop3.png"
-                          alt="Results and testimonials 3"
-                          width={1658}
-                          height={768}
-                          className="hidden sm:block rounded-3xl w-full h-auto"
-                        />
-                        <Image
-                          src="/images/hero/resultsmobile3.png"
-                          alt="Results and testimonials 3 (mobile)"
-                          width={900}
-                          height={900}
-                          className="block sm:hidden rounded-3xl w-full h-auto"
-                        />
+            {/* Case Study 1 */}
+            <Image
+              src="/images/hero/case1-desktop.png"
+              alt="Case Study 1 Results (desktop)"
+              width={1658}
+              height={768}
+              className="hidden sm:block rounded-3xl w-full h-auto"
+              priority
+            />
+            <Image
+              src="/images/hero/case1-mobile.png"
+              alt="Case Study 1 Results (mobile)"
+              width={900}
+              height={900}
+              className="block sm:hidden rounded-3xl w-full h-auto"
+              priority
+            />
+            {/* Case Study 2 */}
+            <Image
+              src="/images/hero/case2-desktop.png"
+              alt="Case Study 2 Results (desktop)"
+              width={1658}
+              height={768}
+              className="hidden sm:block rounded-3xl w-full h-auto"
+            />
+            <Image
+              src="/images/hero/case2-mobile.png"
+              alt="Case Study 2 Results (mobile)"
+              width={900}
+              height={900}
+              className="block sm:hidden rounded-3xl w-full h-auto"
+            />
+            {/* Case Study 3 */}
+            <Image
+              src="/images/hero/case3-desktop.png"
+              alt="Case Study 3 Results (desktop)"
+              width={1658}
+              height={768}
+              className="hidden sm:block rounded-3xl w-full h-auto"
+            />
+            <Image
+              src="/images/hero/case3-mobile.png"
+              alt="Case Study 3 Results (mobile)"
+              width={900}
+              height={900}
+              className="block sm:hidden rounded-3xl w-full h-auto"
+            />
+            {/* Case Study 4 */}
+            <Image
+              src="/images/hero/case4-desktop.png"
+              alt="Case Study 4 Results (desktop)"
+              width={1658}
+              height={768}
+              className="hidden sm:block rounded-3xl w-full h-auto"
+            />
+            <Image
+              src="/images/hero/case4-mobile.png"
+              alt="Case Study 4 Results (mobile)"
+              width={900}
+              height={900}
+              className="block sm:hidden rounded-3xl w-full h-auto"
+            />
             {/* Testimonial carousel (infinity scroll) */}
             <div className="w-full mt-4 relative">
               {/* Mobile scroll hint */}

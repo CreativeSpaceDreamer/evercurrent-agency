@@ -12,7 +12,7 @@ export default function GuidePage() {
         </p>
         <div className="flex justify-center mb-6">
           <Image
-            src="/images/freeguidecover.png"
+            src="/images/guide/freeguidecover.png"
             alt="The Master Guide To Building A Retention Engine For Your Ecommerce Brand"
             width={320}
             height={420}

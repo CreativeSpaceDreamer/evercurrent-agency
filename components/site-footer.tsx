@@ -30,6 +30,11 @@ export function SiteFooter() {
                 <h4 className="text-sm font-semibold uppercase tracking-[0.35em] text-stroke mb-5">Links</h4>
                 <ul className="space-y-4 flex flex-col items-center md:items-start">
                   <li>
+                    <Link href="/guide" className="text-sm text-accent font-semibold hover:text-accent-2 transition-colors border border-accent rounded px-2 py-1 bg-accent/10 hover:bg-accent/20">
+                      Free Guide
+                    </Link>
+                  </li>
+                  <li>
                     <Link href="#testimonials" className="text-sm text-paper hover:text-accent-2 transition-colors">
                       Testimonial
                     </Link>

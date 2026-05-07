@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 
 const KitForm = dynamic(() => import("@/components/kit-form-client"), { ssr: false });
 
+export default function GuidePage() {
   return (
     <main className="min-h-screen bg-paper text-ink flex flex-col items-center px-4 py-8 sm:py-16">
       {/* Hero Section */}

@@ -1,7 +1,28 @@
 "use client";
-import Image from "next/image";
 
-export default function GuidePage() {
+import Image from "next/image";
+import { useEffect, useRef } from "react";
+
+  // Ref for Kit form container
+  const kitRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Only run on client
+    if (!kitRef.current) return;
+    // Remove any existing Kit form
+    kitRef.current.innerHTML = "";
+    // Create and append the Kit script
+    const script = document.createElement("script");
+    script.src = "https://lifecycle-inbox.kit.com/c41d418059/index.js";
+    script.async = true;
+    script.setAttribute("data-uid", "c41d418059");
+    kitRef.current.appendChild(script);
+    // Kit injects the form into the container
+    return () => {
+      kitRef.current && (kitRef.current.innerHTML = "");
+    };
+  }, []);
+
   return (
     <main className="min-h-screen bg-paper text-ink flex flex-col items-center px-4 py-8 sm:py-16">
       {/* Hero Section */}
@@ -25,16 +46,13 @@ export default function GuidePage() {
       {/* Embedded Kit Form */}
       <section className="w-full max-w-md bg-white rounded-2xl shadow-soft p-6 mb-10 flex flex-col items-center">
         <h2 className="text-xl font-semibold mb-2">Get The Free Guide</h2>
-        {/* Kit embed script */}
-        <div id="kit-form-container" className="w-full flex flex-col items-center">
-          {/* Kit will inject the form here */}
-        </div>
+        <div
+          ref={kitRef}
+          id="kit-form-container"
+          className="w-full flex flex-col items-center"
+          style={{ minHeight: 220 }}
+        />
         <p className="text-sm text-ink-2 mt-4">No spam. Unsubscribe anytime.</p>
-        <script
-          async
-          data-uid="c41d418059"
-          src="https://lifecycle-inbox.kit.com/c41d418059/index.js"
-        ></script>
       </section>
 
       {/* What's Inside Section */}

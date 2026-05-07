@@ -25,15 +25,16 @@ export default function GuidePage() {
       {/* Embedded Kit Form */}
       <section className="w-full max-w-md bg-white rounded-2xl shadow-soft p-6 mb-10 flex flex-col items-center">
         <h2 className="text-xl font-semibold mb-2">Get The Free Guide</h2>
-        {/* Replace the iframe src below with your actual Kit form embed code */}
-        <iframe
-          src="https://your-kit-form-url.com/embed"
-          title="Opt-in Form"
-          className="w-full h-56 border-none mb-4"
-          style={{ minHeight: 220 }}
-          allowFullScreen
-        />
-        <p className="text-sm text-ink-2">No spam. Unsubscribe anytime.</p>
+        {/* Kit embed script */}
+        <div id="kit-form-container" className="w-full flex flex-col items-center">
+          {/* Kit will inject the form here */}
+        </div>
+        <p className="text-sm text-ink-2 mt-4">No spam. Unsubscribe anytime.</p>
+        <script
+          async
+          data-uid="c41d418059"
+          src="https://lifecycle-inbox.kit.com/c41d418059/index.js"
+        ></script>
       </section>
 
       {/* What's Inside Section */}

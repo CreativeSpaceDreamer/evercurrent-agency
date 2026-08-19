@@ -1,7 +1,6 @@
 import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import LifecycleInboxResultsCard from "@/components/lifecycle-inbox-results-card";
 
 function IvoryMaskIcon({ src, alt }: { src: string; alt: string }) {
   return (
@@ -332,10 +331,6 @@ export default function HomePage() {
       </section>
 
 
-      <section id="results" className="scroll-mt-56">
-        <LifecycleInboxResultsCard />
-      </section>
-
       <section className="bg-bone/48">
         <div className="section-shell pt-10 pb-14 sm:pt-12 sm:pb-16 md:pt-14 md:pb-20">
           <div className="mx-auto max-w-4xl text-center">
@@ -352,7 +347,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div id="testimonials" className="scroll-mt-28" />
       <section id="faq" className="scroll-mt-28 border-t border-stroke bg-paper">
         <div className="section-shell pt-10 pb-14 sm:pt-12 sm:pb-16 md:pt-14 md:pb-20">
           <div className="mx-auto max-w-4xl text-center">

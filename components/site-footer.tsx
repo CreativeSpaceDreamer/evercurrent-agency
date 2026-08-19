@@ -35,16 +35,6 @@ export function SiteFooter() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="#testimonials" className="text-sm text-paper hover:text-accent-2 transition-colors">
-                      Testimonial
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#results" className="text-sm text-paper hover:text-accent-2 transition-colors">
-                      Results
-                    </Link>
-                  </li>
-                  <li>
                     <Link href="#email-designs" className="text-sm text-paper hover:text-accent-2 transition-colors">
                       Email Designs
                     </Link>

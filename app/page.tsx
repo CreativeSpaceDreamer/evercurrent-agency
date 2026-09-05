@@ -371,19 +371,22 @@ export default function HomePage() {
             </p>
           </div>
 
-          <p className="mt-10 text-center text-sm text-ink-2">Swipe left or right to explore the designs.</p>
+          <p className="mt-10 text-center text-sm text-ink-2">
+            Scroll within a design to see the full email. Swipe left or right to browse the set.
+          </p>
 
           <div className="-mx-6 mt-8 overflow-x-auto px-6 pb-4 sm:mt-10 sm:pb-5">
             <div className="flex w-max snap-x snap-mandatory gap-7 sm:gap-8">
               {designProofItems.map((item) => (
                 <article key={item.title} className="w-[84vw] max-w-[28rem] shrink-0 snap-start sm:w-[26rem]">
                   <div className="rounded-[1.75rem] border border-stroke bg-slate/50 p-3 sm:p-4">
-                    <div className="relative aspect-[4/5] overflow-hidden rounded-[1.25rem] bg-paper">
+                    <div className="relative aspect-[9/16] touch-pan-y overflow-y-auto overflow-x-hidden overscroll-contain rounded-[1.25rem] bg-paper">
                       <Image
                         src={item.image}
                         alt={item.title}
-                        fill
-                        className="object-cover object-top"
+                        width={1080}
+                        height={1920}
+                        className="block h-auto w-full"
                         sizes="(max-width: 640px) 84vw, 416px"
                       />
                     </div>

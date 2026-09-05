@@ -273,6 +273,132 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="bg-paper">
+        <div className="section-shell pt-10 pb-14 sm:pt-12 sm:pb-16 md:pt-14 md:pb-20">
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="section-eyebrow">Common growth constraints</p>
+            <h2 className="section-title mt-5">Are you struggling with...</h2>
+          </div>
+          <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
+            {strugglePoints.map((item) => (
+              <article key={item.title} className="mx-auto w-full max-w-sm text-center md:max-w-none md:text-left">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-stroke bg-slate/40 md:mx-0">
+                  <IvoryMaskIcon src={item.icon} alt={`${item.title} icon`} />
+                </div>
+                <h3 className="mt-5 text-[1.8rem] font-semibold leading-tight text-ink sm:text-[2rem]">{item.title}</h3>
+                <p className="mt-4 text-base leading-8 text-ink-2">{item.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="process" className="scroll-mt-28 border-t border-stroke bg-paper">
+        <div className="section-shell pt-10 pb-14 sm:pt-12 sm:pb-16 md:pt-14 md:pb-20">
+          <div className="mx-auto max-w-4xl text-center">
+            <h2 className="section-title">
+              Our simple 3-step process to build your <em className="italic">retention engine</em>.
+            </h2>
+            <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-ink-2 sm:text-lg">
+              We help premium ecommerce brands turn more traffic into first-time customers, stronger repeat purchase behavior, and more predictable long-term revenue.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-5 md:grid-cols-3 md:gap-6">
+            {processSteps.map((step) => (
+              <article key={step.title} className="rounded-3xl border border-stroke bg-slate/35 p-7 text-center sm:p-8 md:text-left">
+                <div className="mx-auto inline-flex h-11 w-11 items-center justify-center rounded-full border border-stroke text-ink md:mx-0">
+                  <ProcessLineIcon step={step.title} />
+                </div>
+                <h3 className="mt-5 text-3xl font-semibold text-ink">{step.title}</h3>
+                <p className="mt-4 text-base leading-8 text-ink-2">{step.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="what-we-build" className="scroll-mt-28 bg-paper">
+        <div className="section-shell pt-10 pb-14 sm:pt-12 sm:pb-16 md:pt-14 md:pb-20">
+          <div className="mx-auto mb-8 max-w-3xl text-center sm:mb-9">
+            <h2 className="section-title">What we&apos;ll build for you.</h2>
+            <p className="mt-3 text-base text-ink-2 sm:text-lg">
+              Snapshot of the backend eCommerce funnel we&apos;re building for your brand.
+            </p>
+          </div>
+          <div className="premium-panel mx-auto max-w-6xl p-3 sm:p-5 md:p-6">
+            <div className="overflow-hidden rounded-[1.35rem] bg-paper">
+              <Image
+                src="/images/Retention-System.png"
+                alt="Retention system diagram showing backend ecommerce funnel architecture"
+                width={1388}
+                height={768}
+                className="h-auto w-full"
+                sizes="(max-width: 1023px) 95vw, 1120px"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-bone/48">
+        <div className="section-shell pt-10 pb-14 sm:pt-12 sm:pb-16 md:pt-14 md:pb-20">
+          <div className="mx-auto max-w-4xl text-center">
+            <h2 className="section-title">How can we help?</h2>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {helpPillars.map((pillar) => (
+              <IllustratedPanel
+                key={pillar.title}
+                eyebrow={pillar.eyebrow}
+                title={pillar.title}
+                description={pillar.body}
+                illustration={<pillar.Illustration />}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div id="email-designs" className="scroll-mt-28" />
+      <section id="design-proof" className="scroll-mt-28 border-t border-stroke bg-paper">
+        <div className="section-shell pt-10 pb-14 sm:pt-12 sm:pb-16 md:pt-14 md:pb-20">
+          <div className="mx-auto max-w-4xl text-center">
+            <h2 className="section-title">
+              Beautiful designs that <em className="italic">convert.</em>
+            </h2>
+            <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-ink-2 sm:text-lg">
+              Our designs not only look good, but they&apos;ll make you more money.
+            </p>
+          </div>
+
+          <p className="mt-10 text-center text-sm text-ink-2">Swipe left or right to explore the designs.</p>
+
+          <div className="-mx-6 mt-8 overflow-x-auto px-6 pb-4 sm:mt-10 sm:pb-5">
+            <div className="flex w-max snap-x snap-mandatory gap-7 sm:gap-8">
+              {designProofItems.map((item) => (
+                <article key={item.title} className="w-[84vw] max-w-[28rem] shrink-0 snap-start sm:w-[26rem]">
+                  <div className="rounded-[1.75rem] border border-stroke bg-slate/50 p-3 sm:p-4">
+                    <div className="relative aspect-[4/5] overflow-hidden rounded-[1.25rem] bg-paper">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        className="object-cover object-top"
+                        sizes="(max-width: 640px) 84vw, 416px"
+                      />
+                    </div>
+                  </div>
+                  <div className="mx-auto mt-6 max-w-[25rem] text-center">
+                    <h3 className="text-2xl font-semibold text-ink sm:text-[2rem]">{item.title}</h3>
+                    <p className="mt-3 text-base leading-7 text-ink-2">{item.caption}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="pricing" className="scroll-mt-28 border-t border-stroke bg-paper">
         <div className="section-shell pt-10 pb-14 sm:pt-12 sm:pb-16 md:pt-14 md:pb-20">
           <div className="mx-auto max-w-4xl text-center">
@@ -320,129 +446,33 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="what-we-build" className="scroll-mt-28 bg-paper">
-        <div className="section-shell pt-10 pb-14 sm:pt-12 sm:pb-16 md:pt-14 md:pb-20">
-          <div className="mx-auto mb-8 max-w-3xl text-center sm:mb-9">
-            <h2 className="section-title">What we&apos;ll build for you.</h2>
-            <p className="mt-3 text-base text-ink-2 sm:text-lg">
-              Snapshot of the backend eCommerce funnel we&apos;re building for your brand.
-            </p>
-          </div>
-          <div className="premium-panel mx-auto max-w-6xl p-3 sm:p-5 md:p-6">
-            <div className="overflow-hidden rounded-[1.35rem] bg-paper">
-              <Image
-                src="/images/Retention-System.png"
-                alt="Retention system diagram showing backend ecommerce funnel architecture"
-                width={1388}
-                height={768}
-                className="h-auto w-full"
-                sizes="(max-width: 1023px) 95vw, 1120px"
-              />
+      <div id="trainings" className="scroll-mt-28" />
+      <section id="about" className="scroll-mt-28 bg-slate text-ink">
+        <div className="section-shell pt-12 pb-14 sm:pt-14 sm:pb-16 md:pt-16 md:pb-20">
+          <div className="grid items-center gap-10 md:grid-cols-[0.92fr,1.08fr] md:gap-12">
+            <div className="relative mx-auto h-72 w-72 overflow-hidden rounded-full bg-paper/10 sm:h-80 sm:w-80">
+              <Image src="/images/hero/founder-headshot.jpg" alt="Founder portrait" fill className="object-cover" sizes="320px" />
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-paper">
-        <div className="section-shell pt-10 pb-14 sm:pt-12 sm:pb-16 md:pt-14 md:pb-20">
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="section-eyebrow">Common growth constraints</p>
-            <h2 className="section-title mt-5">Are you struggling with...</h2>
-          </div>
-          <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
-            {strugglePoints.map((item) => (
-              <article key={item.title} className="mx-auto w-full max-w-sm text-center md:max-w-none md:text-left">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-stroke bg-slate/40 md:mx-0">
-                  <IvoryMaskIcon src={item.icon} alt={`${item.title} icon`} />
-                </div>
-                <h3 className="mt-5 text-[1.8rem] font-semibold leading-tight text-ink sm:text-[2rem]">{item.title}</h3>
-                <p className="mt-4 text-base leading-8 text-ink-2">{item.body}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="process" className="scroll-mt-28 border-t border-stroke bg-paper">
-        <div className="section-shell pt-10 pb-14 sm:pt-12 sm:pb-16 md:pt-14 md:pb-20">
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="section-title">
-              Our simple 3-step process to build your <em className="italic">retention engine</em>.
-            </h2>
-            <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-ink-2 sm:text-lg">
-              We help premium ecommerce brands turn more traffic into first-time customers, stronger repeat purchase behavior, and more predictable long-term revenue.
-            </p>
-          </div>
-          <div className="mt-12 grid gap-5 md:grid-cols-3 md:gap-6">
-            {processSteps.map((step) => (
-              <article key={step.title} className="rounded-3xl border border-stroke bg-slate/35 p-7 text-center sm:p-8 md:text-left">
-                <div className="mx-auto inline-flex h-11 w-11 items-center justify-center rounded-full border border-stroke text-ink md:mx-0">
-                  <ProcessLineIcon step={step.title} />
-                </div>
-                <h3 className="mt-5 text-3xl font-semibold text-ink">{step.title}</h3>
-                <p className="mt-4 text-base leading-8 text-ink-2">{step.body}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <div id="email-designs" className="scroll-mt-28" />
-      <section id="design-proof" className="scroll-mt-28 border-t border-stroke bg-paper">
-        <div className="section-shell pt-10 pb-14 sm:pt-12 sm:pb-16 md:pt-14 md:pb-20">
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="section-title">
-              Beautiful designs that <em className="italic">convert.</em>
-            </h2>
-            <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-ink-2 sm:text-lg">
-              Our designs not only look good, but they&apos;ll make you more money.
-            </p>
-          </div>
-
-          <p className="mt-10 text-center text-sm text-ink-2">Swipe left or right to explore the designs.</p>
-
-          <div className="-mx-6 mt-8 overflow-x-auto px-6 pb-4 sm:mt-10 sm:pb-5">
-            <div className="flex w-max snap-x snap-mandatory gap-7 sm:gap-8">
-              {designProofItems.map((item) => (
-                <article key={item.title} className="w-[84vw] max-w-[28rem] shrink-0 snap-start sm:w-[26rem]">
-                  <div className="rounded-[1.75rem] border border-stroke bg-slate/50 p-3 sm:p-4">
-                    <div className="relative aspect-[4/5] overflow-hidden rounded-[1.25rem] bg-paper">
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        className="object-cover object-top"
-                        sizes="(max-width: 640px) 84vw, 416px"
-                      />
-                    </div>
-                  </div>
-                  <div className="mx-auto mt-6 max-w-[25rem] text-center">
-                    <h3 className="text-2xl font-semibold text-ink sm:text-[2rem]">{item.title}</h3>
-                    <p className="mt-3 text-base leading-7 text-ink-2">{item.caption}</p>
-                  </div>
-                </article>
-              ))}
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-accent-2">Meet the founder</p>
+              <h2 className="mt-4 text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl">
+                Retention should feel as premium as the brand.
+              </h2>
+              <p className="mt-5 text-base leading-relaxed text-ink-2 sm:text-lg">
+                I spent 2 years running my own ecommerce brand before starting Lifecycle Inbox — scaling it to
+                $50k/month. I know what it feels like to hand part of your business over to someone else, because
+                I&apos;ve been the founder deciding who gets access to my own Klaviyo account.
+              </p>
+              <p className="mt-5 text-base leading-relaxed text-ink-2 sm:text-lg">
+                That&apos;s the lens every recommendation here gets filtered through: not &ldquo;send more
+                emails,&rdquo; but does this actually move revenue for a brand at your stage.
+              </p>
+              <div className="mt-7 flex justify-center md:justify-start">
+                <Link href="https://www.lifecycleinbox.com/contact#strategy-call" className="btn-primary">
+                  Book a Strategy Call
+                </Link>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-
-      <section className="bg-bone/48">
-        <div className="section-shell pt-10 pb-14 sm:pt-12 sm:pb-16 md:pt-14 md:pb-20">
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="section-title">How can we help?</h2>
-          </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {helpPillars.map((pillar) => (
-              <IllustratedPanel
-                key={pillar.title}
-                eyebrow={pillar.eyebrow}
-                title={pillar.title}
-                description={pillar.body}
-                illustration={<pillar.Illustration />}
-              />
-            ))}
           </div>
         </div>
       </section>
@@ -475,37 +505,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div id="trainings" className="scroll-mt-28" />
-      <section id="about" className="scroll-mt-28 bg-slate text-ink">
-        <div className="section-shell pt-12 pb-14 sm:pt-14 sm:pb-16 md:pt-16 md:pb-20">
-          <div className="grid items-center gap-10 md:grid-cols-[0.92fr,1.08fr] md:gap-12">
-            <div className="relative mx-auto h-72 w-72 overflow-hidden rounded-full bg-paper/10 sm:h-80 sm:w-80">
-              <Image src="/images/hero/founder-headshot.jpg" alt="Founder portrait" fill className="object-cover" sizes="320px" />
-            </div>
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-accent-2">Meet the founder</p>
-              <h2 className="mt-4 text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl">
-                Retention should feel as premium as the brand.
-              </h2>
-              <p className="mt-5 text-base leading-relaxed text-ink-2 sm:text-lg">
-                I spent 2 years running my own ecommerce brand before starting Lifecycle Inbox — scaling it to
-                $50k/month. I know what it feels like to hand part of your business over to someone else, because
-                I&apos;ve been the founder deciding who gets access to my own Klaviyo account.
-              </p>
-              <p className="mt-5 text-base leading-relaxed text-ink-2 sm:text-lg">
-                That&apos;s the lens every recommendation here gets filtered through: not &ldquo;send more
-                emails,&rdquo; but does this actually move revenue for a brand at your stage.
-              </p>
-              <div className="mt-7 flex justify-center md:justify-start">
-                <Link href="https://www.lifecycleinbox.com/contact#strategy-call" className="btn-primary">
-                  Book a Strategy Call
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="bg-paper">
         <div className="section-shell pt-12 pb-16 text-center sm:pt-14 sm:pb-20 md:pt-16 md:pb-24">
           <h2 className="section-title mx-auto max-w-4xl">
@@ -526,4 +525,3 @@ export default function HomePage() {
     </Suspense>
   );
 }
-

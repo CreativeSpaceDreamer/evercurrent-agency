@@ -327,13 +327,13 @@ export default function HomePage() {
           </div>
           <div className="premium-panel mx-auto max-w-6xl p-3 sm:p-5 md:p-6">
             <div className="overflow-hidden rounded-[1.35rem] bg-paper">
-              <Image
-                src="/images/Retention-System.png"
-                alt="Retention system diagram showing backend ecommerce funnel architecture"
-                width={1388}
-                height={768}
+              {/* SVG — served as a plain <img> so it isn't passed through the Next.js image optimizer */}
+              <img
+                src="/images/retention-flowchart.svg"
+                alt="Diagram showing traffic sources feeding into an email and SMS list, which powers automated flows and monthly campaigns, converging into first-time customers, an email funnel, repeating customers, and revenue growth"
+                width={2096}
+                height={1390}
                 className="h-auto w-full"
-                sizes="(max-width: 1023px) 95vw, 1120px"
               />
             </div>
           </div>

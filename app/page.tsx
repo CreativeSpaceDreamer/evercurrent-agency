@@ -406,13 +406,12 @@ export default function HomePage() {
               {designProofItems.map((item) => (
                 <article key={item.title} className="w-[84vw] max-w-[28rem] shrink-0 snap-start sm:w-[26rem]">
                   <div className="rounded-[1.75rem] border border-stroke bg-slate/50 p-3 sm:p-4">
-                    <div className="overflow-hidden rounded-[1.25rem] bg-paper">
+                    <div className="relative aspect-[4/5] overflow-hidden rounded-[1.25rem] bg-paper">
                       <Image
                         src={item.image}
                         alt={item.title}
-                        width={1080}
-                        height={1920}
-                        className="h-auto w-full"
+                        fill
+                        className="object-cover object-top"
                         sizes="(max-width: 640px) 84vw, 416px"
                       />
                     </div>

@@ -84,6 +84,64 @@ const processSteps = [
   }
 ] as const;
 
+const pricingOffers = [
+  {
+    name: "Paid Diagnostic Audit",
+    price: "$247",
+    priceNote: "flat",
+    timeline: "Delivered in 2–3 business days",
+    description:
+      "A written read on where your lifecycle is leaking revenue, so you know exactly what to fix first.",
+    includes: [
+      "Written audit of your email flows",
+      "Deliverability review (SPF/DKIM/DMARC)",
+      "Popup and list-capture setup review",
+      "Segmentation review",
+      "Prioritized fix list",
+      "Short video walkthrough"
+    ],
+    cta: "Get my audit",
+    style: "primary" as const
+  },
+  {
+    name: "Welcome Series Sprint",
+    price: "$597",
+    priceNote: "flat",
+    timeline: "Delivered in 5–7 business days",
+    description: "Your welcome series built, tested, and live — ready to turn new subscribers into first buyers.",
+    includes: [
+      "3–5 email welcome series built, tested, and live in Klaviyo or Omnisend",
+      "One-page doc on what to watch in the first 30 days"
+    ],
+    cta: "Start my welcome series",
+    style: "primary" as const
+  },
+  {
+    name: "Core Flow Build Sprint",
+    price: "$1,800",
+    priceNote: "flat",
+    timeline: "Delivered in 2–3 weeks",
+    description: "The core lifecycle infrastructure your brand needs, built and live end to end.",
+    includes: [
+      "4–6 core flows built, tested, and live: welcome, abandoned cart, browse abandonment, post-purchase, win-back",
+      "30-minute strategy call"
+    ],
+    cta: "Book my flow sprint",
+    style: "primary" as const
+  },
+  {
+    name: "Monthly Retainer",
+    price: "Starting at $800",
+    priceNote: "/mo",
+    timeline: "Ongoing support",
+    description:
+      "Ongoing flow maintenance and campaign support. A quick call finalizes the exact scope and rate for your store.",
+    includes: ["Flow maintenance and optimization", "2–4 campaigns per month", "One monthly reporting call"],
+    cta: "Talk retainer scope",
+    style: "secondary" as const
+  }
+] as const;
+
 const designProofItems = [
   {
     title: "Welcome / First Purchase",
@@ -218,6 +276,53 @@ export default function HomePage() {
             >
               See Our Work
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" className="scroll-mt-28 border-t border-stroke bg-paper">
+        <div className="section-shell pt-10 pb-14 sm:pt-12 sm:pb-16 md:pt-14 md:pb-20">
+          <div className="mx-auto max-w-4xl text-center">
+            <p className="section-eyebrow">Pricing</p>
+            <h2 className="section-title mt-5">Pick where to start.</h2>
+            <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-ink-2 sm:text-lg">
+              Fixed-scope engagements for a clear deliverable, or ongoing support once the foundation is in place.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {pricingOffers.map((offer) => (
+              <article key={offer.name} className="flex flex-col rounded-3xl border border-stroke bg-slate/35 p-7 sm:p-8">
+                {offer.style === "secondary" && (
+                  <span className="mb-4 inline-flex w-fit items-center rounded-full border border-stroke bg-paper px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.25em] text-ink-2">
+                    Custom scope
+                  </span>
+                )}
+                <h3 className="text-2xl font-semibold text-ink">{offer.name}</h3>
+                <p className="mt-3 flex items-baseline gap-2">
+                  <span className="text-3xl font-semibold text-ink sm:text-4xl">{offer.price}</span>
+                  <span className="text-sm font-medium text-ink-2">{offer.priceNote}</span>
+                </p>
+                <p className="mt-1 text-sm text-ink-2">{offer.timeline}</p>
+                <p className="mt-4 text-base leading-7 text-ink-2">{offer.description}</p>
+                <p className="mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-ink-2">Includes</p>
+                <ul className="mt-3 space-y-2 text-sm text-ink">
+                  {offer.includes.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-accent" aria-hidden="true" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-auto pt-6">
+                  <Link
+                    href="https://www.lifecycleinbox.com/contact#strategy-call"
+                    className={offer.style === "primary" ? "btn-primary w-full sm:w-auto" : "btn-secondary w-full sm:w-auto"}
+                  >
+                    {offer.cta}
+                  </Link>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>

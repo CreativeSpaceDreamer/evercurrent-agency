@@ -326,14 +326,17 @@ export default function HomePage() {
             </p>
           </div>
           <div className="premium-panel mx-auto max-w-6xl p-3 sm:p-5 md:p-6">
-            <div className="overflow-hidden rounded-[1.35rem] bg-paper">
+            {/* Horizontally scrollable, same pattern as the Designs section — the diagram is too
+                detailed to scale down to the content column without going blurry, so it renders
+                at (or near) native resolution and scrolls instead. */}
+            <div className="overflow-x-auto rounded-[1.35rem] bg-paper">
               {/* SVG — served as a plain <img> so it isn't passed through the Next.js image optimizer */}
               <img
                 src="/images/retention-flowchart.svg"
                 alt="Diagram showing traffic sources feeding into an email and SMS list, which powers automated flows and monthly campaigns, converging into first-time customers, an email funnel, repeating customers, and revenue growth"
                 width={2096}
                 height={1390}
-                className="h-auto w-full"
+                className="h-auto max-w-none"
               />
             </div>
           </div>

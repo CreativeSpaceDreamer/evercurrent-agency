@@ -226,11 +226,8 @@ export default function HomePage() {
   return (
     <Suspense fallback={null}>
       <div className="bg-paper">
-      <section
-        id="home"
-        className="scroll-mt-28 flex min-h-[calc(100svh-3.5rem)] flex-col bg-paper sm:min-h-0"
-      >
-        <div className="section-shell pt-2 pb-8 sm:pt-20 sm:pb-10 md:pt-24 md:pb-12 lg:pt-28 lg:pb-14">
+      <section id="home" className="scroll-mt-28 bg-paper">
+        <div className="section-shell pt-2 pb-10 sm:pt-20 sm:pb-16 md:pt-24 md:pb-20 lg:pt-28">
           <div className="mx-auto max-w-[52rem] text-center">
             <h1 className="mx-auto max-w-[21.5rem] text-[1.62rem] font-semibold leading-[0.98] text-ink sm:max-w-none sm:text-6xl md:text-[4.5rem] lg:text-[5.2rem]">
               We build the lifecycle engine behind growing e-commerce brands.
@@ -240,29 +237,10 @@ export default function HomePage() {
               infrastructure built to match a premium customer experience.
             </p>
           </div>
-        </div>
 
-        <div className="section-shell mt-auto -mt-6 pt-1 pb-10 sm:mt-0 sm:pt-8 sm:pb-16 md:pt-10 md:pb-20">
-          <div className="premium-panel mx-auto -mt-[43px] mb-[43px] max-w-5xl p-1.5 sm:mt-0 sm:mb-0 sm:p-3">
-            <div className="relative aspect-[16/8] overflow-hidden rounded-[1.1rem] border border-stroke bg-slate sm:aspect-video sm:rounded-[1.35rem]">
-              <div className="absolute -left-12 -top-10 h-44 w-44 rounded-full bg-ink/5 blur-2xl" aria-hidden="true" />
-              <div className="absolute -bottom-14 -right-10 h-48 w-48 rounded-full bg-ink/5 blur-2xl" aria-hidden="true" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <button
-                  type="button"
-                  aria-label="Play VSL placeholder"
-                  className="flex h-16 w-16 items-center justify-center rounded-full bg-paper/90 text-ink shadow-soft sm:h-20 sm:w-20"
-                >
-                  <svg className="h-7 w-7 translate-x-[1px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M8 6v12l10-6-10-6z" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
           <div
             id="strategy-call"
-            className="scroll-mt-28 mx-auto mt-2 flex max-w-md flex-col items-center gap-2.5 sm:mt-8 sm:max-w-5xl sm:flex-row sm:justify-center sm:gap-4"
+            className="scroll-mt-28 mx-auto mt-8 flex max-w-md flex-col items-center gap-2.5 sm:mt-10 sm:max-w-5xl sm:flex-row sm:justify-center sm:gap-4"
           >
             <Link
               href="https://www.lifecycleinbox.com/contact#strategy-call"

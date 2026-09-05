@@ -1,6 +1,13 @@
 import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  IllustratedPanel,
+  StrategyIllustration,
+  FlowsIllustration,
+  CampaignsIllustration,
+  CreativeIllustration
+} from "@/components/illustrated-panel";
 
 function IvoryMaskIcon({ src, alt }: { src: string; alt: string }) {
   return (
@@ -172,20 +179,28 @@ const designProofItems = [
 
 const helpPillars = [
   {
+    eyebrow: "Strategy",
     title: "Lifecycle strategy",
-    body: "Retention audits, roadmaps, segmentation thinking, and offer logic based on how customers actually buy."
+    body: "Retention audits, roadmaps, segmentation thinking, and offer logic based on how customers actually buy.",
+    Illustration: StrategyIllustration
   },
   {
+    eyebrow: "Automation",
     title: "Flows and automation",
-    body: "Full lifecycle flows built with clear intent and performance accountability behind every message."
+    body: "Full lifecycle flows built with clear intent and performance accountability behind every message.",
+    Illustration: FlowsIllustration
   },
   {
+    eyebrow: "Campaigns",
     title: "Campaign systems",
-    body: "Planned campaign execution with copy, design, merchandising, and calendar structure."
+    body: "Planned campaign execution with copy, design, merchandising, and calendar structure.",
+    Illustration: CampaignsIllustration
   },
   {
+    eyebrow: "Creative",
     title: "Premium creative execution",
-    body: "Design and messaging quality that reflects the brand standard while converting at a high level."
+    body: "Design and messaging quality that reflects the brand standard while converting at a high level.",
+    Illustration: CreativeIllustration
   }
 ];
 
@@ -421,10 +436,13 @@ export default function HomePage() {
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {helpPillars.map((pillar) => (
-              <article key={pillar.title} className="rounded-3xl bg-paper/85 p-7 sm:p-8">
-                <h3 className="text-2xl font-semibold text-ink sm:text-3xl">{pillar.title}</h3>
-                <p className="mt-4 text-sm leading-relaxed text-ink-2 sm:text-base">{pillar.body}</p>
-              </article>
+              <IllustratedPanel
+                key={pillar.title}
+                eyebrow={pillar.eyebrow}
+                title={pillar.title}
+                description={pillar.body}
+                illustration={<pillar.Illustration />}
+              />
             ))}
           </div>
         </div>
@@ -471,9 +489,13 @@ export default function HomePage() {
                 Retention should feel as premium as the brand.
               </h2>
               <p className="mt-5 text-base leading-relaxed text-ink-2 sm:text-lg">
-                Lifecycle Inbox was built around one idea: growing e-commerce brands should not have to choose
-                between strong performance and strong presentation. We build lifecycle systems that drive repeat revenue
-                without compromising brand quality.
+                I spent 2 years running my own ecommerce brand before starting Lifecycle Inbox — scaling it to
+                $50k/month. I know what it feels like to hand part of your business over to someone else, because
+                I&apos;ve been the founder deciding who gets access to my own Klaviyo account.
+              </p>
+              <p className="mt-5 text-base leading-relaxed text-ink-2 sm:text-lg">
+                That&apos;s the lens every recommendation here gets filtered through: not &ldquo;send more
+                emails,&rdquo; but does this actually move revenue for a brand at your stage.
               </p>
               <div className="mt-7 flex justify-center md:justify-start">
                 <Link href="https://www.lifecycleinbox.com/contact#strategy-call" className="btn-primary">

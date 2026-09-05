@@ -1,4 +1,4 @@
-<svg viewBox="0 0 2096 1390" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Full retention system diagram: traffic sources feed the website, which builds an email and SMS list; the list powers twelve automated flows and three monthly campaign types, all converging back through the website into first-time customers, an email funnel, repeating customers, and compounding revenue, LTV and AOV, with repeat customers looping back into the top of the funnel.">
+<svg viewBox="0 0 2096 1390" width="2096" height="1390" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Full retention system diagram: traffic sources feed the website, which builds an email and SMS list; the list powers twelve automated flows and three monthly campaign types, all converging back through the website into first-time customers, an email funnel, repeating customers, and compounding revenue, LTV and AOV, with repeat customers looping back into the top of the funnel.">
 
 <style>
   text{font-family:'Plus Jakarta Sans',ui-sans-serif,-apple-system,'Segoe UI',system-ui,sans-serif;}

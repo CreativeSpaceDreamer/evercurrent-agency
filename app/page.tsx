@@ -318,25 +318,27 @@ export default function HomePage() {
       </section>
 
       <section id="what-we-build" className="scroll-mt-28 bg-paper">
-        <div className="section-shell pt-10 pb-14 sm:pt-12 sm:pb-16 md:pt-14 md:pb-20">
+        <div className="section-shell pt-10 sm:pt-12 md:pt-14">
           <div className="mx-auto mb-8 max-w-3xl text-center sm:mb-9">
             <h2 className="section-title">What we&apos;ll build for you.</h2>
             <p className="mt-3 text-base text-ink-2 sm:text-lg">
               Snapshot of the backend eCommerce funnel we&apos;re building for your brand.
             </p>
           </div>
-          <div className="premium-panel mx-auto max-w-6xl p-3 sm:p-5 md:p-6">
-            {/* Horizontally scrollable, same pattern as the Designs section — the diagram is too
-                detailed to scale down to the content column without going blurry, so it renders
-                at (or near) native resolution and scrolls instead. */}
-            <div className="overflow-x-auto rounded-[1.35rem] bg-paper">
+        </div>
+        {/* Wider than the normal max-w-6xl content column — this diagram alone needs the extra
+            room to stay legible without shrinking or scrolling, the same one-off breakout
+            dahausdigital.com uses for their equivalent diagram section. */}
+        <div className="mx-auto max-w-[1800px] px-5 pb-14 sm:px-6 sm:pb-16 md:pb-20 lg:px-8">
+          <div className="premium-panel p-3 sm:p-5 md:p-6">
+            <div className="overflow-hidden rounded-[1.35rem] bg-paper">
               {/* SVG — served as a plain <img> so it isn't passed through the Next.js image optimizer */}
               <img
                 src="/images/retention-flowchart.svg"
                 alt="Diagram showing traffic sources feeding into an email and SMS list, which powers automated flows and monthly campaigns, converging into first-time customers, an email funnel, repeating customers, and revenue growth"
                 width={2096}
                 height={1390}
-                className="h-auto max-w-none"
+                className="h-auto w-full"
               />
             </div>
           </div>

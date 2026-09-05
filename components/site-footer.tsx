@@ -8,10 +8,10 @@ export function SiteFooter() {
           <div className="space-y-12">
             <div>
               <h2 className="text-2xl font-semibold text-paper mb-3">
-                Join The DTC Insights Newsletter
+                Retention tactics for ecommerce brands.
               </h2>
               <p className="text-sm leading-7 text-stroke max-w-2xl">
-                Sign up to our mailing list below and be the first to know about new updates. Don&apos;t worry, we hate spam too.
+                Flows, campaigns, and fixes for growing repeat revenue — no fluff, unsubscribe anytime.
               </p>
               <form className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <input
@@ -20,7 +20,7 @@ export function SiteFooter() {
                   className="flex-1 min-w-0 px-4 py-3 bg-paper text-ink rounded-lg border border-stroke focus:outline-none focus:ring-2 focus:ring-accent"
                 />
                 <button type="submit" className="btn-primary whitespace-nowrap px-5 py-3">
-                  Learn From Us
+                  Join the list
                 </button>
               </form>
             </div>

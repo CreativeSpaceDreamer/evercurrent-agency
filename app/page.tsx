@@ -114,10 +114,11 @@ const pricingOffers = [
     name: "Welcome Series Sprint",
     price: "$597",
     priceNote: "flat",
-    timeline: "Delivered in 5–7 business days",
+    timeline: "Live within 7 business days",
     description: "Your welcome series built, tested, and live — ready to turn new subscribers into first buyers.",
     includes: [
-      "3–5 email welcome series built, tested, and live in Klaviyo or Omnisend",
+      "4-email welcome series plus your signup form, built, tested, and live in Klaviyo or Omnisend",
+      "Written guarantee: full refund if it is not live in 7 business days or misses the agreed result",
       "One-page doc on what to watch in the first 30 days"
     ],
     cta: "Start my welcome series",
@@ -130,7 +131,7 @@ const pricingOffers = [
     timeline: "Delivered in 2–3 weeks",
     description: "The core lifecycle infrastructure your brand needs, built and live end to end.",
     includes: [
-      "4–6 core flows built, tested, and live: welcome, abandoned cart, browse abandonment, post-purchase, win-back",
+      "4–6 core flows built, tested, and live: welcome, abandoned checkout and cart, browse and site abandonment, post-purchase, win-back",
       "30-minute strategy call"
     ],
     cta: "Book my flow sprint",
@@ -143,7 +144,7 @@ const pricingOffers = [
     timeline: "Ongoing support",
     description:
       "Ongoing flow maintenance and campaign support. A quick call finalizes the exact scope and rate for your store.",
-    includes: ["Flow maintenance and optimization", "2–4 campaigns per month", "One monthly reporting call"],
+    includes: ["Flow maintenance and optimization", "4 emails a month ($800) or 8 emails a month ($1,500)", "One monthly reporting call"],
     cta: "Talk retainer scope",
     style: "secondary" as const
   }
@@ -467,8 +468,8 @@ export default function HomePage() {
                 Retention should feel as premium as the brand.
               </h2>
               <p className="mt-5 text-base leading-relaxed text-ink-2 sm:text-lg">
-                I spent 2 years running my own ecommerce brand before starting Lifecycle Inbox — scaling it to
-                $50k/month. I know what it feels like to hand part of your business over to someone else, because
+                I spent 2 years running my own ecommerce brand and building its email myself before starting
+                Lifecycle Inbox. I know what it feels like to hand part of your business over to someone else, because
                 I&apos;ve been the founder deciding who gets access to my own Klaviyo account.
               </p>
               <p className="mt-5 text-base leading-relaxed text-ink-2 sm:text-lg">
